@@ -177,7 +177,7 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bin/gkisystem:system/bin/gkisystem \
 	device/motorola/jordan/proprietary/bin/gki_pd_notifier:system/bin/gki_pd_notifier \
 	device/motorola/jordan/proprietary/bin/ap_gain_mmul.bin:system/bin/ap_gain_mmul.bin \
-	device/motorola/jordan/proprietary/bin/ap_gain_france.bin:system/bin/aap_gain_france.bin \
+	device/motorola/jordan/proprietary/bin/ap_gain_france.bin:system/bin/ap_gain_france.bin \
 	device/motorola/jordan/proprietary/bin/ap_gain.bin:system/bin/ap_gain.bin \
 	device/motorola/jordan/proprietary/bin/gkilogd:system/bin/gkilogd \
 	device/motorola/jordan/proprietary/bin/iptables:system/bin/iptables \
