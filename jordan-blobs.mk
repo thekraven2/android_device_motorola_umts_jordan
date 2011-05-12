@@ -126,9 +126,10 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/etc/fmc_init_6450.2.bts:system/etc/fmc_init_6450.2.bts \
 	device/motorola/jordan/proprietary/etc/fm_rx_init_1273.2.bts:system/etc/fm_rx_init_1273.2.bts \
 	device/motorola/jordan/proprietary/etc/fm_rx_init_6450.2.bts:system/etc/fm_rx_init_6450.2.bts \
-        device/motorola/jordan/recovery.fstab:system/etc/recovery.fstab \
-        device/motorola/jordan/media_profiles.xml:system/etc/media_profiles.xml \
-	device/motorola/jordan/proprietary/etc/01_Vendor_ti_omx.cfg:system/etc/01_Vendor_ti_omx.cfg
+	device/motorola/jordan/media_profiles.xml:system/etc/media_profiles.xml \
+	device/motorola/jordan/proprietary/etc/01_Vendor_ti_omx.cfg:system/etc/01_Vendor_ti_omx.cfg \
+	device/motorola/jordan/recovery.fstab:system/etc/recovery.fstab \
+	device/motorola/jordan/proprietary/etc/custom_backup_list.txt:system/etc/custom_backup_list.txt
 
 #Moto etc
 PRODUCT_COPY_FILES += \
