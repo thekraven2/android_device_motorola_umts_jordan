@@ -233,6 +233,8 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bootmenu/images/progress_empty.png:system/bootmenu/images/progress_empty.png \
 	device/motorola/jordan/proprietary/bootmenu/images/progress_fill.png:system/bootmenu/images/progress_fill.png \
 	device/motorola/jordan/proprietary/bootmenu/recovery/res/keys:system/bootmenu/recovery/res/keys \
+	device/motorola/jordan/proprietary/bootmenu/recovery/res/images/icon_error.png:system/bootmenu/recovery/res/images/icon_error.png \
+	device/motorola/jordan/proprietary/bootmenu/recovery/res/images/icon_done.png:system/bootmenu/recovery/res/images/icon_done.png \
 	device/motorola/jordan/proprietary/bootmenu/recovery/res/images/icon_installing.png:system/bootmenu/recovery/res/images/icon_installing.png \
 	device/motorola/jordan/proprietary/bootmenu/recovery/res/images/indeterminate1.png:system/bootmenu/recovery/res/images/indeterminate1.png \
 	device/motorola/jordan/proprietary/bootmenu/recovery/res/images/indeterminate2.png:system/bootmenu/recovery/res/images/indeterminate2.png \
