@@ -13,9 +13,13 @@ mkdir vendor/cyanogen/proprietary
 cd vendor/cyanogen/proprietary
 wget http://mirror.kanged.net/recoveries/RomManager.apk
 
+RomManager is not compatible with Motorola Defy,
+you can remove it from rom build system because it needs a real Recovery Image
+
 Build:
 ======
 
+optional :
     export PLATFORM_DIR=$(pwd)
     export ARCH=arm
     export CROSS_COMPILE=arm-eabi-
@@ -24,6 +28,9 @@ Build:
     export BOARD_USES_QCOM_HARDWARE=true
     export PATH=$PLATFORM_DIR/prebuilt/linux-x86/toolchain/arm-eabi-4.2.1/bin:$JAVA_HOME/bin:$PATH
     cd $PLATFORM_DIR
+
+    export CYANOGEN_NIGHTLY=true
+
 
 . build/envsetup.sh 
 
