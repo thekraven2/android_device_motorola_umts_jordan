@@ -19,12 +19,21 @@ $BUSYBOX chmod 755 /sbin/
 $BUSYBOX chmod 755 /sbin/busybox
 $BUSYBOX chown 0.0 /sbin/busybox
 
-
 ## begin busybox sym link..
 
 for cmd in $(/sbin/busybox --list); do
   /sbin/busybox ln -s /sbin/busybox /sbin/$cmd
 done
+
+## sshd dropbear permissions
+
+$BUSYBOX cp -f /system/bootmenu/dropbear/* /sbin/
+$BUSYBOX chmod 755 /sbin/dropbear
+$BUSYBOX chmod 755 /sbin/sftp-server
+$BUSYBOX chmod 755 /sbin/ssh
+$BUSYBOX chmod 755 /sbin/scp
+$BUSYBOX chown 0.0 /sbin/dropbear
+$BUSYBOX chown 0.0 /sbin/sftp-server
 
 ## rootsh create.
 
