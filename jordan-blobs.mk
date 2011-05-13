@@ -58,7 +58,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/jordan/proprietary/lib/librilswitch.so:system/lib/librilswitch.so \
     device/motorola/jordan/proprietary/lib/libsmapi.so:system/lib/libsmapi.so \
     device/motorola/jordan/proprietary/lib/hw/gralloc.omap3.so:system/lib/hw/gralloc.omap3.so \
-    device/motorola/jordan/proprietary/lib/hw/lights.jordan.so:system/lib/hw/lights.jordan.so \
     device/motorola/jordan/proprietary/lib/dsp/baseimage.dof:system/lib/dsp/baseimage.dof \
     device/motorola/jordan/proprietary/lib/dsp/conversions.dll64P:system/lib/dsp/conversions.dll64P \
     device/motorola/jordan/proprietary/lib/dsp/h264vdec_sn.dll64P:system/lib/dsp/h264vdec_sn.dll64P \
