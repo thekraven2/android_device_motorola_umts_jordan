@@ -4,7 +4,7 @@
 ######## Execute [ADB Daemon] Menu
 
 
-export PATH=/sbin:/system/xbin:/system/bin:system/bootmenu/binary
+export PATH=/sbin:/system/xbin:/system/bin:/system/bootmenu/binary
 
 ######## Main Script
 
@@ -16,6 +16,9 @@ export PATH=/sbin:/system/xbin:/system/bin:system/bootmenu/binary
 mkdir /tmp
 echo 'msc_adb' > /dev/usb_device_mode
 
-PATH=/sbin:/system/xbin:/system/bin:system/bootmenu/binary /sbin/adbd.root &
+PATH=/sbin:/system/xbin:/system/bin:/system/bootmenu/binary /sbin/adbd.root &
+
+cd /system/bootmenu/script
+. dropbear.sh
 
 exit
