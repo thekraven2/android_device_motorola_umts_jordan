@@ -126,9 +126,10 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/etc/fmc_init_6450.2.bts:system/etc/fmc_init_6450.2.bts \
 	device/motorola/jordan/proprietary/etc/fm_rx_init_1273.2.bts:system/etc/fm_rx_init_1273.2.bts \
 	device/motorola/jordan/proprietary/etc/fm_rx_init_6450.2.bts:system/etc/fm_rx_init_6450.2.bts \
-        device/motorola/jordan/recovery.fstab:system/etc/recovery.fstab \
-        device/motorola/jordan/media_profiles.xml:system/etc/media_profiles.xml \
-	device/motorola/jordan/proprietary/etc/01_Vendor_ti_omx.cfg:system/etc/01_Vendor_ti_omx.cfg
+	device/motorola/jordan/media_profiles.xml:system/etc/media_profiles.xml \
+	device/motorola/jordan/proprietary/etc/01_Vendor_ti_omx.cfg:system/etc/01_Vendor_ti_omx.cfg \
+	device/motorola/jordan/recovery.fstab:system/etc/recovery.fstab \
+	device/motorola/jordan/proprietary/etc/custom_backup_list.txt:system/etc/custom_backup_list.txt
 
 #Moto etc
 PRODUCT_COPY_FILES += \
@@ -233,6 +234,8 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bootmenu/images/progress_empty.png:system/bootmenu/images/progress_empty.png \
 	device/motorola/jordan/proprietary/bootmenu/images/progress_fill.png:system/bootmenu/images/progress_fill.png \
 	device/motorola/jordan/proprietary/bootmenu/recovery/res/keys:system/bootmenu/recovery/res/keys \
+	device/motorola/jordan/proprietary/bootmenu/recovery/res/images/icon_error.png:system/bootmenu/recovery/res/images/icon_error.png \
+	device/motorola/jordan/proprietary/bootmenu/recovery/res/images/icon_done.png:system/bootmenu/recovery/res/images/icon_done.png \
 	device/motorola/jordan/proprietary/bootmenu/recovery/res/images/icon_installing.png:system/bootmenu/recovery/res/images/icon_installing.png \
 	device/motorola/jordan/proprietary/bootmenu/recovery/res/images/indeterminate1.png:system/bootmenu/recovery/res/images/indeterminate1.png \
 	device/motorola/jordan/proprietary/bootmenu/recovery/res/images/indeterminate2.png:system/bootmenu/recovery/res/images/indeterminate2.png \
@@ -261,3 +264,17 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bootmenu/script/uninstall.sh:system/bootmenu/script/uninstall.sh \
 	device/motorola/jordan/proprietary/bootmenu/script/unroot.sh:system/bootmenu/script/unroot.sh
 
+
+#Bootmenu Dropbear Addon
+PRODUCT_COPY_FILES += \
+	device/motorola/jordan/proprietary/bootmenu/script/dropbear.sh:system/bootmenu/script/dropbear.sh \
+	device/motorola/jordan/proprietary/bootmenu/dropbear/dropbear:system/bootmenu/dropbear/dropbear \
+	device/motorola/jordan/proprietary/bootmenu/dropbear/dropbear.banner:system/bootmenu/dropbear/dropbear.banner \
+	device/motorola/jordan/proprietary/bootmenu/dropbear/dropbear.key.dss:system/bootmenu/dropbear/dropbear.key.dss \
+	device/motorola/jordan/proprietary/bootmenu/dropbear/dropbear.key.rsa:system/bootmenu/dropbear/dropbear.key.rsa \
+	device/motorola/jordan/proprietary/bootmenu/dropbear/dropbear.version:system/bootmenu/dropbear/dropbear.version \
+	device/motorola/jordan/proprietary/bootmenu/dropbear/dropbearkey:system/bootmenu/dropbear/dropbearkey \
+	device/motorola/jordan/proprietary/bootmenu/dropbear/scp:system/bootmenu/dropbear/scp \
+	device/motorola/jordan/proprietary/bootmenu/dropbear/sftp-server:system/bootmenu/dropbear/sftp-server \
+	device/motorola/jordan/proprietary/bootmenu/dropbear/ssh:system/bootmenu/dropbear/ssh \
+	device/motorola/jordan/proprietary/bootmenu/script/dropbear.sh:system/bootmenu/script/dropbear.sh
