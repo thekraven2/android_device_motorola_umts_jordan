@@ -87,9 +87,11 @@ is_lit(struct light_state_t const* state)
 static int
 rgb_to_brightness(struct light_state_t const* state)
 {
-    int color = state->color & 0x00ffffff;
-    return ((77*((color>>16)&0x00ff))
-            + (150*((color>>8)&0x00ff)) + (29*(color&0x00ff))) >> 8;
+    int red = (state->color >> 16) & 0xff;
+    int green = (state->color >> 8) & 0xff;
+    int blue = state->color & 0xff;
+
+    return ((77 * red) + (150 * green) + (29 * blue)) >> 8;
 }
 
 static int
