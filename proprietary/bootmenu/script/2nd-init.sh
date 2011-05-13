@@ -1,4 +1,4 @@
-#!/sbin/sh
+#!/sbin/ash
 
 ######## BootMenu Script v0.6.1
 ######## Execute [2nd-init] Menu
@@ -27,7 +27,7 @@ umount /dev/pts
 
 mount -o remount,rw /system
 chmod 755 /system/bootmenu/binary/2nd-init
-mount -o remount,ro /system
+# mount -o remount,ro /system
 
 /system/bootmenu/binary/2nd-init
 
