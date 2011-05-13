@@ -214,7 +214,7 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bootmenu/binary/adbd:system/bootmenu/binary/adbd \
 	device/motorola/jordan/proprietary/bootmenu/binary/bootmenu:system/bootmenu/binary/bootmenu \
 	device/motorola/jordan/proprietary/bootmenu/binary/bootmenu:system/bin/bootmenu \
-	device/motorola/jordan/proprietary/bootmenu/binary/busybox:system/bootmenu/binary/busybox \
+#	device/motorola/jordan/proprietary/bootmenu/binary/busybox:system/bootmenu/binary/busybox \
 	device/motorola/jordan/proprietary/bootmenu/binary/logwrapper.bin:system/bootmenu/binary/logwrapper.bin \
 	device/motorola/jordan/proprietary/bootmenu/binary/logwrapper.bin:system/bin/logwrapper.bin \
 	device/motorola/jordan/proprietary/bootmenu/config/bootmenu_bypass:system/bootmenu/config/bootmenu_bypass \
