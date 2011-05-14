@@ -61,6 +61,9 @@ mount -t ext3 -o noatime,nodiratime,barrier=1,data=ordered /dev/block/mmcblk1p21
 ## umount -l /cache
 #############################
 
+# turn on button backlight (back button is used in CWM Recovery 3.x)
+echo 1 > /sys/class/leds/button-backlight/brightness
+
 ## /sbin/recovery &
 /sbin/recovery
 
