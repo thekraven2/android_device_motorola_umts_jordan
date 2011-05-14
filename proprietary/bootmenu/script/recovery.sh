@@ -60,19 +60,19 @@ if [ ! $ret -eq 0 ]; then
 fi
 
 #############################
-umount -l /system
+umount -f -l /system
 usleep 100
-mount -t ext3 -o noatime,nodiratime,barrier=1,data=ordered /dev/block/mmcblk1p21 /system
+mount -t ext3 -o rw,noatime,nodiratime,barrier=1,data=ordered /dev/block/mmcblk1p21 /system
 
 # retry without type & options if not mounted
 [ ! -d /system/bootmenu ] && mount -o rw /dev/block/mmcblk1p21 /system
 
 # set red led if problem with system, green led else
-echo 0 > /sys/class/leds/red
-echo 0 > /sys/class/leds/green
-echo 0 > /sys/class/leds/blue
-[ ! -d /system/bootmenu ] && echo 1 > /sys/class/leds/red
-[ -d /system/bootmenu ] && echo 1 > /sys/class/leds/green
+echo 0 > /sys/class/leds/red/brightness
+echo 0 > /sys/class/leds/green/brightness
+echo 0 > /sys/class/leds/blue/brightness
+[ ! -d /system/bootmenu ] && echo 1 > /sys/class/leds/red/brightness
+[ -d /system/bootmenu ] && echo 1 > /sys/class/leds/green/brightness
 usleep 100
 
 ## umount -l /data
