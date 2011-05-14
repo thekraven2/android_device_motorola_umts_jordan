@@ -1,10 +1,17 @@
 CyanogenMod 7.1 for Motorola Defy (Android 2.3.4 AOSP)
 
+
 Download:
 =========
 
 repo init -u git://github.com/Quarx2k/android.git -b gingerbread
+
+or as alternative, automerged with quarx and cyanogen every 6 hours :
+
+repo init -u git://github.com/tpruvot/android.git -b gingerbread
+
 repo sync
+
 
 Download RomManager:
 ====================
@@ -15,6 +22,7 @@ wget http://mirror.kanged.net/recoveries/RomManager.apk
 
 RomManager is not compatible with Motorola Defy,
 you can remove it from rom build system because it needs a real Recovery Image
+
 
 Build:
 ======
@@ -31,6 +39,7 @@ optional :
 
     export CYANOGEN_NIGHTLY=true
 
+rm -rf out/target
 
 . build/envsetup.sh 
 
