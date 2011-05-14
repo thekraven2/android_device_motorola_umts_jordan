@@ -114,9 +114,6 @@ run_program("/tmp/backuptool.sh", "restore");
 package_extract_file("system/bin/modelid_cfg.sh", "/tmp/modelid_cfg.sh");
 set_perm(0, 0, 0777, "/tmp/modelid_cfg.sh");
 run_program("/tmp/modelid_cfg.sh");
-package_extract_file("system/bin/verify_cache_partition_size.sh", "/tmp/verify_cache_partition_size.sh");
-set_perm(0, 0, 0777, "/tmp/verify_cache_partition_size.sh");
-run_program("/tmp/verify_cache_partition_size.sh");
 show_progress(0.200000, 10);
 assert(package_extract_file("boot.img", "/tmp/boot.img"),
        write_raw_image("/tmp/boot.img", "/dev/block/mmcblk1p15"),
