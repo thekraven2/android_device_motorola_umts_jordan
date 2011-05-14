@@ -165,9 +165,6 @@ int SensorISL29030L::enable(int32_t handle, int en)
 
 int SensorISL29030L::readEvents(sensors_event_t* data, int count)
 {
-    if (!mEnabled)
-        return 0;
-
     if (count < 1)
         return -EINVAL;
 
