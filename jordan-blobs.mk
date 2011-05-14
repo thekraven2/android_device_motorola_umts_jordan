@@ -127,7 +127,6 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/etc/fm_rx_init_6450.2.bts:system/etc/fm_rx_init_6450.2.bts \
 	device/motorola/jordan/media_profiles.xml:system/etc/media_profiles.xml \
 	device/motorola/jordan/proprietary/etc/01_Vendor_ti_omx.cfg:system/etc/01_Vendor_ti_omx.cfg \
-	device/motorola/jordan/recovery.fstab:system/etc/recovery.fstab \
 	device/motorola/jordan/proprietary/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
 	device/motorola/jordan/proprietary/etc/custom_backup_list.txt:system/etc/custom_backup_list.txt
 
@@ -208,7 +207,6 @@ PRODUCT_COPY_FILES += \
 
 #Bootmenu
 PRODUCT_COPY_FILES += \
-	device/motorola/jordan/proprietary/bootmenu/2nd-boot/your_file.txt:system/bootmenu/2nd-boot/your_file.txt \
 	device/motorola/jordan/init.mapphone_umts.rc:system/bootmenu/2nd-init/init.mapphone_umts.rc \
 	device/motorola/jordan/init.rc:system/bootmenu/2nd-init/init.rc \
 	device/motorola/jordan/proprietary/bootmenu/binary/2nd-init:system/bootmenu/binary/2nd-init \
@@ -255,14 +253,25 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/recovery:system/bootmenu/recovery/sbin/recovery \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/sdparted:system/bootmenu/recovery/sbin/sdparted \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/tune2fs:system/bootmenu/recovery/sbin/tune2fs \
+	device/motorola/jordan/proprietary/bootmenu/recovery/recovery.fstab:system/bootmenu/recovery/recovery.fstab \
 	device/motorola/jordan/proprietary/bootmenu/script/2nd-init.sh:system/bootmenu/script/2nd-init.sh \
+	device/motorola/jordan/proprietary/bootmenu/script/2nd-boot.sh:system/bootmenu/script/2nd-boot.sh \
 	device/motorola/jordan/proprietary/bootmenu/script/adbd.sh:system/bootmenu/script/adbd.sh \
+	device/motorola/jordan/proprietary/bootmenu/script/overclock.sh:system/bootmenu/script/overclock.sh \
 	device/motorola/jordan/proprietary/bootmenu/script/post_bootmenu.sh:system/bootmenu/script/post_bootmenu.sh \
 	device/motorola/jordan/proprietary/bootmenu/script/pre_bootmenu.sh:system/bootmenu/script/pre_bootmenu.sh \
 	device/motorola/jordan/proprietary/bootmenu/script/recovery.sh:system/bootmenu/script/recovery.sh \
 	device/motorola/jordan/proprietary/bootmenu/script/uninstall.sh:system/bootmenu/script/uninstall.sh \
-	device/motorola/jordan/proprietary/bootmenu/script/unroot.sh:system/bootmenu/script/unroot.sh
-
+	device/motorola/jordan/proprietary/bootmenu/script/unroot.sh:system/bootmenu/script/unroot.sh \
+	device/motorola/jordan/proprietary/bootmenu/ext/modules/cpufreq_conservative.ko:system/bootmenu/ext/modules/cpufreq_conservative.ko \
+	device/motorola/jordan/proprietary/bootmenu/ext/modules/cpufreq_interactive.ko:system/bootmenu/ext/modules/cpufreq_interactive.ko \
+	device/motorola/jordan/proprietary/bootmenu/ext/modules/cpufreq_ondemand.ko:system/bootmenu/ext/modules/cpufreq_ondemand.ko \
+	device/motorola/jordan/proprietary/bootmenu/ext/modules/cpufreq_performance.ko:system/bootmenu/ext/modules/cpufreq_performance.ko \
+	device/motorola/jordan/proprietary/bootmenu/ext/modules/cpufreq_powersave.ko:system/bootmenu/ext/modules/cpufreq_powersave.ko \
+	device/motorola/jordan/proprietary/bootmenu/ext/modules/cpufreq_smartass.ko:system/bootmenu/ext/modules/cpufreq_smartass.ko \
+	device/motorola/jordan/proprietary/bootmenu/ext/modules/cpufreq_userspace.ko:system/bootmenu/ext/modules/cpufreq_userspace.ko \
+	device/motorola/jordan/proprietary/bootmenu/ext/modules/overclock_defy.ko:system/bootmenu/ext/modules/overclock_defy.ko \
+	device/motorola/jordan/proprietary/bootmenu/ext/modules/symsearch.ko:system/bootmenu/ext/modules/symsearch.ko
 
 #Bootmenu Dropbear Addon
 PRODUCT_COPY_FILES += \
