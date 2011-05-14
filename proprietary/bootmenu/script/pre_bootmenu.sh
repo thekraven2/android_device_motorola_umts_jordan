@@ -43,10 +43,6 @@ rm -f /default.prop
 cp -f /system/bootmenu/config/default.prop /default.prop
 
 
-## logwrapper can be locked by mount_ext3 script exit
-
-killall logwrapper
-
 ## /sbin/adbd replace..
 
 cp -f /system/bootmenu/binary/adbd /sbin/adbd.root

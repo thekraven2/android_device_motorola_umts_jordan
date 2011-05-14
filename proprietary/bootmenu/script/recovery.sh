@@ -25,6 +25,11 @@ chmod 755 /res
 cp -r -f /system/bootmenu/recovery/res/* /res/
 cp -r -f /system/bootmenu/recovery/sbin/* /sbin/
 
+
+## logwrapper can be locked by mount_ext3 script exit (locks /system)
+killall logwrapper
+
+
 chmod 755 /sbin/*
 
 rm -f /sbin/postrecoveryboot.sh
