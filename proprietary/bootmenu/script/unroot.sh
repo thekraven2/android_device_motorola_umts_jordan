@@ -1,10 +1,10 @@
 #!/sbin/sh
 
-######## BootMenu Script v0.6.1
+######## BootMenu Script v0.8.0
 ######## Execute [Root/Unroot] Menu
 
 
-export PATH=/sbin:/system/xbin:/system/bin:system/bootmenu/binary
+export PATH=/sbin:/system/xbin:/system/bin
 
 remove_superuser()
 {

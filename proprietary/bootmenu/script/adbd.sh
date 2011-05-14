@@ -1,26 +1,16 @@
-#!/sbin/ash
+#!/sbin/sh
 
-######## BootMenu Script v0.6.1
+######## BootMenu Script v0.8.0
 ######## Execute [ADB Daemon] Menu
 
 
-export PATH=/sbin:/system/xbin:/system/bin:/system/bootmenu/binary
+export PATH=/sbin:/system/xbin:/system/bin
 
 ######## Main Script
 
-######## Fix me..
-#### killall adbd
-#### killall adbd.root
-########
-
-[[ ! -d /tmp ]] && mkdir /tmp
-
+mkdir /tmp
 echo 'msc_adb' > /dev/usb_device_mode
 
-PATH=/sbin:/system/xbin:/system/bin:/system/bootmenu/binary /sbin/adbd.root &
-
-# echo '???' > /dev/usb_device_mode
-# cd /system/bootmenu/script
-# . dropbear.sh
+PATH=/sbin:/system/xbin:/system/bin:system/bootmenu/binary /sbin/adbd.root &
 
 exit
