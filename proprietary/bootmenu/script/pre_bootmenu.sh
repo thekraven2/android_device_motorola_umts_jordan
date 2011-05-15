@@ -26,6 +26,10 @@ for cmd in $(/sbin/busybox --list); do
   /sbin/busybox ln -s /sbin/busybox /sbin/$cmd
 done
 
+# disable some duplicate busybox applets
+[ -f /sbin/reboot ] && rm /sbin/reboot
+
+
 ## rootsh create.
 
 cp -f /system/bin/sh /rootsh

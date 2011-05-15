@@ -1,4 +1,4 @@
-#!/sbin/ash
+#!/sbin/sh
 
 ######## BootMenu Script
 ######## Execute [2nd-boot] Menu
@@ -8,7 +8,8 @@ export PATH=/sbin:/system/xbin:/system/bin
 
 ######## Main Script
 
-. /system/bootmenu/script/dropbear.sh
+cd /system/bootmenu/script
 
+. dropbear.sh
 
 exit
