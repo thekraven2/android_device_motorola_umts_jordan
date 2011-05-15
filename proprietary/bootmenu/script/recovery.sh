@@ -50,19 +50,23 @@ touch /cache/recovery/log
 touch /cache/recovery/last_log
 touch /tmp/recovery.log
 
-
+killall adbd
+sleep 1
 ps | grep -v grep | grep adbd
 ret=$?
 
 if [ ! $ret -eq 0 ]; then
-  chmod 755 /system/bootmenu/script/adbd.sh
-  /system/bootmenu/script/adbd.sh
+   # chmod 755 /system/bootmenu/script/adbd.sh
+   # /system/bootmenu/script/adbd.sh
+
+   # don't use adbd here, will load many android process which locks /system
+   killall adbd
 fi
 
 #############################
-umount -f -l /system
-usleep 100
-mount -t ext3 -o rw,noatime,nodiratime,barrier=1,data=ordered /dev/block/mmcblk1p21 /system
+umount -l /system
+sleep 1
+mount -t ext3 -o rw,noatime,nodiratime /dev/block/mmcblk1p21 /system
 
 # retry without type & options if not mounted
 [ ! -d /system/bootmenu ] && mount -o rw /dev/block/mmcblk1p21 /system
@@ -82,7 +86,9 @@ usleep 100
 # turn on button backlight (back button is used in CWM Recovery 3.x)
 echo 1 > /sys/class/leds/button-backlight/brightness
 
-## /sbin/recovery &
-/sbin/recovery
+/sbin/recovery &
+
+#unlock this script used from /system
+#/sbin/recovery
 
 exit
