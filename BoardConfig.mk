@@ -60,7 +60,6 @@ BOARD_USE_YUV422I_DEFAULT_COLORFORMAT := true
 BOARD_EGL_CFG := device/motorola/jordan/egl.cfg
 
 BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
 
 BOARD_BOOTIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00280000)
 BOARD_RECOVERYIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x00500000)
