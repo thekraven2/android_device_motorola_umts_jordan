@@ -128,6 +128,5 @@ $(call inherit-product, device/motorola/jordan/jordan-vendor.mk)
 
 $(call inherit-product, build/target/product/full_base.mk)
 
-USE_SHOLES_PROPERTY := true
 PRODUCT_NAME := generic_jordan
 PRODUCT_DEVICE := MB525
