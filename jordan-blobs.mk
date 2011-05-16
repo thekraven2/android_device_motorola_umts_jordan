@@ -195,6 +195,7 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bin/location:system/bin/location \
 	device/motorola/jordan/proprietary/bin/charge_only_mode:system/bin/charge_only_mode \
 	device/motorola/jordan/proprietary/bin/panic_daemon:system/bin/panic_daemon \
+	device/motorola/jordan/proprietary/xbin/groups:system/xbin/groups \
 	device/motorola/jordan/proprietary/xbin/ssmgrd:system/xbin/ssmgrd
 
 #app
