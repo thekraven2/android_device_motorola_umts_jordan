@@ -119,9 +119,9 @@ set_light_backlight(struct light_device_t* dev,
     }
 
     pthread_mutex_lock(&g_lock);
-    err = write_int(LCD_FILE, brightness);
+    err = write_int(ALS_FILE, als_mode);
     if (!err) {
-        err = write_int(ALS_FILE, als_mode);
+        err = write_int(LCD_FILE, brightness);
     }
     pthread_mutex_unlock(&g_lock);
 
