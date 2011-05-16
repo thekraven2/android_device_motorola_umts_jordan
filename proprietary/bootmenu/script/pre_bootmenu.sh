@@ -16,7 +16,7 @@ $BUSYBOX mount -o remount,rw rootfs /
 
 $BUSYBOX cp -f /system/bootmenu/binary/busybox /sbin/
 $BUSYBOX chmod 755 /sbin/
-$BUSYBOX chmod 755 /sbin/busybox
+$BUSYBOX chmod 4755 /sbin/busybox
 $BUSYBOX chown 0.0 /sbin/busybox
 
 
@@ -36,6 +36,9 @@ cp -f /system/bin/sh /rootsh
 chown 0.0 /rootsh
 chmod 6755 /rootsh
 
+## missing system files
+
+[ ! -c /dev/tty0 ]  && ln -s /dev/tty /dev/tty0
 
 ## /default.prop replace..
 
@@ -46,6 +49,7 @@ cp -f /system/bootmenu/config/default.prop /default.prop
 ## /sbin/adbd replace..
 
 cp -f /system/bootmenu/binary/adbd /sbin/adbd.root
-chmod 755 /sbin/adbd.root
+chmod 4755 /sbin/adbd.root
+chown 0.0 /sbin/adbd.root
 
 exit

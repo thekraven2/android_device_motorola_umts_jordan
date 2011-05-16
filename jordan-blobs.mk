@@ -253,7 +253,10 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/postrecoveryboot.sh:system/bootmenu/recovery/sbin/postrecoveryboot.sh \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/recovery:system/bootmenu/recovery/sbin/recovery \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/sdparted:system/bootmenu/recovery/sbin/sdparted \
+	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/mke2fs:system/bootmenu/recovery/sbin/mke2fs \
+	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/mke2fs.bin:system/bootmenu/recovery/sbin/mke2fs.bin \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/tune2fs:system/bootmenu/recovery/sbin/tune2fs \
+	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/tune2fs.bin:system/bootmenu/recovery/sbin/tune2fs.bin \
 	device/motorola/jordan/proprietary/bootmenu/recovery/recovery.fstab:system/bootmenu/recovery/recovery.fstab \
 	device/motorola/jordan/proprietary/bootmenu/script/2nd-init.sh:system/bootmenu/script/2nd-init.sh \
 	device/motorola/jordan/proprietary/bootmenu/script/2nd-boot.sh:system/bootmenu/script/2nd-boot.sh \
