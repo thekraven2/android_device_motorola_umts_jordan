@@ -97,7 +97,8 @@ PRODUCT_PACKAGES += \
     gps.jordan \
     sensors.jordan \
     lights.jordan \
-    libaudiopolicy
+    libaudiopolicy \
+    Usb
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
