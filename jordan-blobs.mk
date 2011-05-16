@@ -199,7 +199,6 @@ PRODUCT_COPY_FILES += \
 
 #app
 PRODUCT_COPY_FILES += \
-	device/motorola/jordan/proprietary/app/Usb.apk:system/app/Usb.apk \
 	device/motorola/jordan/proprietary/app/LocationProxyDmPlugin.apk:system/app/LocationProxyDmPlugin.apk \
 	device/motorola/jordan/proprietary/app/FMRadio.apk:system/app/FMRadio.apk \
 	device/motorola/jordan/proprietary/app/FMRadioService.apk:system/app/FMRadioService.apk \
