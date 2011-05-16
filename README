@@ -50,6 +50,10 @@ or...
 lunch cyanogen_jordan-eng
 mka bacon
 
+or (to skip recovery and boot image)
+
+mka out/target/product/jordan/system.img
+
 
 Links:
 ======

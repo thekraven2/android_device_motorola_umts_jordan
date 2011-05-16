@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-######## BootMenu Script v0.8.0
+######## BootMenu Script v0.8.3
 ######## Execute [Custom Recovery] Menu
 
 
@@ -16,6 +16,11 @@ mkdir /res
 rm -f /etc
 mkdir /etc
 
+# hijack mke2fs & tune2fs CWM3
+rm -f /sbin/mke2fs
+rm -f /sbin/tune2fs
+rm -f /sbin/e2fsck
+
 rm -f /sdcard
 mkdir /sdcard
 
@@ -24,11 +29,6 @@ chmod 755 /res
 
 cp -r -f /system/bootmenu/recovery/res/* /res/
 cp -r -f /system/bootmenu/recovery/sbin/* /sbin/
-
-
-## logwrapper can be locked by mount_ext3 script exit (locks /system)
-killall logwrapper
-
 
 chmod 755 /sbin/*
 
@@ -61,34 +61,34 @@ if [ ! $ret -eq 0 ]; then
 
    # don't use adbd here, will load many android process which locks /system
    killall adbd
+   killall adbd.root
 fi
 
 #############################
+# mount in /sbin/postrecoveryboot.sh
 umount -l /system
-sleep 1
+umount -l /data
+#umount -l /cache
+
+usleep 500
 mount -t ext3 -o rw,noatime,nodiratime /dev/block/mmcblk1p21 /system
 
 # retry without type & options if not mounted
-[ ! -d /system/bootmenu ] && mount -o rw /dev/block/mmcblk1p21 /system
+[ ! -f /system/build.prop ] && mount -o rw /dev/block/mmcblk1p21 /system
 
 # set red led if problem with system, green led else
 echo 0 > /sys/class/leds/red/brightness
 echo 0 > /sys/class/leds/green/brightness
 echo 0 > /sys/class/leds/blue/brightness
-[ ! -d /system/bootmenu ] && echo 1 > /sys/class/leds/red/brightness
-[ -d /system/bootmenu ] && echo 1 > /sys/class/leds/green/brightness
+[ ! -f /system/build.prop ] && echo 1 > /sys/class/leds/red/brightness
+[ -f /system/build.prop ] && echo 1 > /sys/class/leds/green/brightness
 usleep 100
 
-## umount -l /data
-## umount -l /cache
 #############################
 
 # turn on button backlight (back button is used in CWM Recovery 3.x)
 echo 1 > /sys/class/leds/button-backlight/brightness
 
-/sbin/recovery &
-
-#unlock this script used from /system
-#/sbin/recovery
+/sbin/recovery
 
 exit
