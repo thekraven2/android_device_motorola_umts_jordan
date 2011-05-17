@@ -29,6 +29,11 @@ done
 # disable some duplicate busybox applets
 [ -f /sbin/reboot ] && rm /sbin/reboot
 
+## make a link to allow 2nd-boot menu option
+OLD_DIR=`pwd`
+cd /system/bootmenu/binary/
+ln -s 2nd-init 2nd-boot
+cd $OLD_DIR
 
 ## rootsh create.
 
