@@ -17,6 +17,14 @@ umount /mnt/asec
 umount /dev/cpuctl
 umount /dev/pts
 
+
+## busybox cleanup..
+for cmd in $(/sbin/busybox --list); do
+  [ -L "/sbin/$cmd" ] && rm "/sbin/$cmd"
+done
+rm /sbin/busybox
+
+
 chmod 755 /system/bootmenu/binary/2nd-init
 /system/bootmenu/binary/2nd-init
 

@@ -8,6 +8,9 @@ export PATH=/sbin:/system/xbin:/system/bin
 
 ######## Main Script
 
+# Moto 2.3.3 /tmp is a link to /data/tmp, bad thing !
+[ -L /tmp ] && rm /tmp
+
 mkdir /tmp
 mkdir /cache
 mkdir /pds

@@ -1,6 +1,6 @@
 #!/system/bin/sh
 
-######## BootMenu Script v0.8.0
+######## BootMenu Script v0.8.3
 ######## Execute Pre BootMenu
 
 
@@ -14,10 +14,12 @@ BUSYBOX="/system/bootmenu/binary/busybox"
 $BUSYBOX mount -o remount,rw rootfs /
 ######################################
 
-$BUSYBOX cp -f /system/bootmenu/binary/busybox /sbin/
+# RECOVERY tool includes busybox
+$BUSYBOX cp -f /system/bootmenu/recovery/sbin/recovery /sbin/busybox
+
 $BUSYBOX chmod 755 /sbin/
-$BUSYBOX chmod 4755 /sbin/busybox
 $BUSYBOX chown 0.0 /sbin/busybox
+$BUSYBOX chmod 4755 /sbin/busybox
 
 
 ## begin busybox sym link..
@@ -29,6 +31,11 @@ done
 # disable some duplicate busybox applets
 [ -f /sbin/reboot ] && rm /sbin/reboot
 
+## make a link to allow 2nd-boot menu option
+OLD_DIR=`pwd`
+cd /system/bootmenu/binary/
+ln -s 2nd-init 2nd-boot
+cd $OLD_DIR
 
 ## rootsh create.
 
