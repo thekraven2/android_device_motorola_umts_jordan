@@ -196,6 +196,7 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bin/location:system/bin/location \
 	device/motorola/jordan/proprietary/bin/charge_only_mode:system/bin/charge_only_mode \
 	device/motorola/jordan/proprietary/bin/panic_daemon:system/bin/panic_daemon \
+	device/motorola/jordan/proprietary/xbin/groups:system/xbin/groups \
 	device/motorola/jordan/proprietary/xbin/ssmgrd:system/xbin/ssmgrd
 #app
 PRODUCT_COPY_FILES += \
@@ -250,12 +251,12 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/nandroid-md5.sh:system/bootmenu/recovery/sbin/nandroid-md5.sh \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/parted:system/bootmenu/recovery/sbin/parted \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/postrecoveryboot.sh:system/bootmenu/recovery/sbin/postrecoveryboot.sh \
-	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/recovery:system/bootmenu/recovery/sbin/recovery \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/sdparted:system/bootmenu/recovery/sbin/sdparted \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/mke2fs:system/bootmenu/recovery/sbin/mke2fs \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/mke2fs.bin:system/bootmenu/recovery/sbin/mke2fs.bin \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/tune2fs:system/bootmenu/recovery/sbin/tune2fs \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/tune2fs.bin:system/bootmenu/recovery/sbin/tune2fs.bin \
+	device/motorola/jordan/proprietary/bootmenu/binary/lsof.static:system/bootmenu/recovery/sbin/lsof \
 	device/motorola/jordan/proprietary/bootmenu/recovery/recovery.fstab:system/bootmenu/recovery/recovery.fstab \
 	device/motorola/jordan/proprietary/bootmenu/script/2nd-init.sh:system/bootmenu/script/2nd-init.sh \
 	device/motorola/jordan/proprietary/bootmenu/script/2nd-boot.sh:system/bootmenu/script/2nd-boot.sh \
@@ -275,16 +276,3 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bootmenu/ext/modules/overclock_defy.ko:system/bootmenu/ext/modules/overclock_defy.ko \
 	device/motorola/jordan/proprietary/bootmenu/ext/modules/symsearch.ko:system/bootmenu/ext/modules/symsearch.ko
 
-#Bootmenu Dropbear Addon
-PRODUCT_COPY_FILES += \
-	device/motorola/jordan/proprietary/bootmenu/script/dropbear.sh:system/bootmenu/script/dropbear.sh \
-	device/motorola/jordan/proprietary/bootmenu/dropbear/dropbear:system/bootmenu/dropbear/dropbear \
-	device/motorola/jordan/proprietary/bootmenu/dropbear/dropbear.banner:system/bootmenu/dropbear/dropbear.banner \
-	device/motorola/jordan/proprietary/bootmenu/dropbear/dropbear.key.dss:system/bootmenu/dropbear/dropbear.key.dss \
-	device/motorola/jordan/proprietary/bootmenu/dropbear/dropbear.key.rsa:system/bootmenu/dropbear/dropbear.key.rsa \
-	device/motorola/jordan/proprietary/bootmenu/dropbear/dropbear.version:system/bootmenu/dropbear/dropbear.version \
-	device/motorola/jordan/proprietary/bootmenu/dropbear/dropbearkey:system/bootmenu/dropbear/dropbearkey \
-	device/motorola/jordan/proprietary/bootmenu/dropbear/scp:system/bootmenu/dropbear/scp \
-	device/motorola/jordan/proprietary/bootmenu/dropbear/sftp-server:system/bootmenu/dropbear/sftp-server \
-	device/motorola/jordan/proprietary/bootmenu/dropbear/ssh:system/bootmenu/dropbear/ssh \
-	device/motorola/jordan/proprietary/bootmenu/script/dropbear.sh:system/bootmenu/script/dropbear.sh
