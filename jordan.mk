@@ -98,6 +98,7 @@ PRODUCT_PACKAGES += \
     sensors.jordan \
     lights.jordan \
     libaudiopolicy \
+    bootmenu_busybox \
     Usb
 
 # we have enough storage space to hold precise GC data
