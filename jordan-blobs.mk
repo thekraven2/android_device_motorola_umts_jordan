@@ -20,14 +20,14 @@
 PRODUCT_COPY_FILES += \
     device/motorola/jordan/qwerty.kl:system/usr/keylayout/qwerty.kl 
 
+#device/motorola/jordan/proprietary/lib/libgps.so:system/lib/libgps.so 
+#device/motorola/jordan/proprietary/lib/libgps.so:obj/lib/libgps.so 
 # LIBS
 PRODUCT_COPY_FILES += \
     device/motorola/jordan/proprietary/lib/libcamera.so:obj/lib/libcamera.so \
     device/motorola/jordan/proprietary/lib/libcamera.so:system/lib/libcamera.so \
     device/motorola/jordan/proprietary/lib/libaudio.so:obj/lib/libaudio.so \
     device/motorola/jordan/proprietary/lib/libaudio.so:system/lib/libaudio.so \
-    device/motorola/jordan/proprietary/lib/libgps.so:system/lib/libgps.so \
-    device/motorola/jordan/proprietary/lib/libgps.so:obj/lib/libgps.so \
     device/motorola/jordan/proprietary/lib/libarcsoft.so:system/lib/libarcsoft.so \
     device/motorola/jordan/proprietary/lib/libbayercamera.so:system/lib/libbayercamera.so \
     device/motorola/jordan/proprietary/lib/libcaps.so:system/lib/libcaps.so \
@@ -58,6 +58,7 @@ PRODUCT_COPY_FILES += \
     device/motorola/jordan/proprietary/lib/librilswitch.so:system/lib/librilswitch.so \
     device/motorola/jordan/proprietary/lib/libsmapi.so:system/lib/libsmapi.so \
     device/motorola/jordan/proprietary/lib/hw/gralloc.omap3.so:system/lib/hw/gralloc.omap3.so \
+    device/motorola/jordan/proprietary/lib/hw/gps.jordan.so:system/lib/hw/gps.jordan.so \
     device/motorola/jordan/proprietary/lib/dsp/baseimage.dof:system/lib/dsp/baseimage.dof \
     device/motorola/jordan/proprietary/lib/dsp/conversions.dll64P:system/lib/dsp/conversions.dll64P \
     device/motorola/jordan/proprietary/lib/dsp/h264vdec_sn.dll64P:system/lib/dsp/h264vdec_sn.dll64P \
@@ -196,7 +197,6 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bin/charge_only_mode:system/bin/charge_only_mode \
 	device/motorola/jordan/proprietary/bin/panic_daemon:system/bin/panic_daemon \
 	device/motorola/jordan/proprietary/xbin/ssmgrd:system/xbin/ssmgrd
-
 #app
 PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/app/LocationProxyDmPlugin.apk:system/app/LocationProxyDmPlugin.apk \
