@@ -8,14 +8,12 @@ export PATH=/sbin:/system/xbin:/system/bin
 
 ######## Main Script
 
+mount -o remount,rw rootfs /
+
 BUSYBOX="/sbin/busybox"
 
 # RECOVERY tool includes busybox
 cp -f /system/bootmenu/recovery/sbin/recovery $BUSYBOX
-
-######## Don't Delete.... ############
-$BUSYBOX mount -o remount,rw rootfs /
-######################################
 
 $BUSYBOX chmod 755 /sbin/
 $BUSYBOX chown 0.0 /sbin/busybox
