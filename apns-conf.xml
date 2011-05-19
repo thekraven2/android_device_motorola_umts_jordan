@@ -281,9 +281,9 @@
   <apn carrier="Tele2 NO Internet" mcc="242" mnc="03" apn="internet.tele2.no" type="default,supl" />
   <apn carrier="Tele2 NO MMS" mcc="242" mnc="03" apn="mms.tele2.no" user="wap" password="wap" mmsc="mmsc.tele2.no" mmsproxy="192.12.40.14:8080" type="mms" />
   <apn carrier="Tele2 MMS" mcc="242" mnc="04" apn="internet.tele2.no " mmsc="http://mmsc.tele2.no" mmsproxy="193.012.040.014" mmsport="8080" type="mms" />
-  <apn carrier="Tele2 Internett" mcc="242" mnc="04" apn="internet.tele2.no" type="default,supl" />
+  <apn carrier="Tele2 Internet" mcc="242" mnc="04" apn="internet.tele2.no" type="default,supl" />
   <apn carrier="Tele2 RU MMS" mcc="250" mnc="20" apn="internet.tele2.ru " mmsc="http://mmsc.tele2.ru" mmsproxy="193.12.40.65" mmsport="8080" type="mms" />
-  <apn carrier="Tele2 RU Internett" mcc="250" mnc="20" apn="internet.tele2.ru" type="default,supl" />
+  <apn carrier="Tele2 RU Internet" mcc="250" mnc="20" apn="internet.tele2.ru" type="default,supl" />
   <apn carrier="NwN" mcc="242" mnc="05" apn="internet" type="default,supl" />
   <apn carrier="NwN MMS" mcc="242" mnc="05" apn="mms" mmsc="http://mms.nwn.no" mmsproxy="188.149.250.10" mmsport="80" type="mms" />
   <apn carrier="DNA Internet" mcc="244" mnc="03" apn="internet" type="default,supl" />
