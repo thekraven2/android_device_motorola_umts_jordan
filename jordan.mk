@@ -26,6 +26,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
+	ro.wifi.channels=14 \
 	ro.media.capture.classification=classH \
 	ro.media.capture.flip=horizontalandvertical \
 	ro.media.capture.flashIntensity=41 \

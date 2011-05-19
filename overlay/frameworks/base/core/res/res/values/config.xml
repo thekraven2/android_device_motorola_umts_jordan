@@ -52,14 +52,15 @@
          based on the hardware -->
     <!-- An Array of "[Connection name],[ConnectivityManager connection type],
          [associated radio-type],[priority]  -->
-    <string-array translatable="false" name="networkAttributes">
-        <item>"wifi,1,1,1"</item>
-        <item>"mobile,0,0,0"</item>
-        <item>"mobile_mms,2,0,2"</item>
-        <item>"mobile_dun,4,0,2"</item>
-        <item>"mobile_hipri,5,0,3"</item>
-        <item>"mobile_agps,7,0,2"</item>
-    </string-array>
+    <string-array name="networkAttributes">
+        <item>wifi,1,1,1</item>
+        <item>mobile,0,0,0</item>
+        <item>mobile_mms,2,0,2</item>
+        <item>mobile_supl,3,0,2</item>
+        <item>mobile_dun,4,0,2</item>
+        <item>mobile_hipri,5,0,3</item>
+        <item>mobile_agps,30,0,2</item>
+     </string-array>
 
     <!-- This string array should be overridden by the device to present a list of radio
          attributes.  This is used by the connectivity manager to decide which networks can coexist
@@ -75,13 +76,16 @@
          USB interfaces.  If the device doesn't want to support tething over USB this should
          be empty.  An example would be "usb.*" -->
     <string-array translatable="false" name="config_tether_usb_regexs">
-        <item>usb\\d</item>
+        <item>usb1</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
          should be empty.  An example would be "softap.*" -->
-    <string-array translatable="false" name="config_tether_wifi_regexs">
+    <string-array name="config_tether_wifi_regexs">
+        <item>wl.*</item>
+        <item>tiwlan.*</item>
+        <item>tiap.*</item>
     </string-array>
 
     <!-- Dhcp range (min, max) to use for tethering purposes -->
@@ -91,8 +95,9 @@
     <!-- Regex array of allowable upstream ifaces for tethering - for example if you want
          tethering on a new interface called "foo2" add <item>"foo\\d"</item> to the array -->
     <string-array translatable="false" name="config_tether_upstream_regexs">
-        <item>rmnet\\d</item>
-        <item>tiwlan\\d</item>
+        <item>ppp.*</item>
+        <item>qmi.*</item>
+        <item>rmnet.*</item>
     </string-array>
 
     <!-- Boolean indicating if we require the use of DUN on mobile for tethering.
@@ -281,7 +286,7 @@
     <!-- Amount of time it takes for the light sensor to warm up in milliseconds.
          For this time after the screen turns on, the Power Manager
          will not debounce light sensor readings -->
-    <integer name="config_lightSensorWarmupTime">500</integer>
+    <integer name="config_lightSensorWarmupTime">0</integer>
 
     <!-- Enables swipe versus poly-finger touch disambiguation in the KeyboardView -->
     <bool name="config_swipeDisambiguation">true</bool>
