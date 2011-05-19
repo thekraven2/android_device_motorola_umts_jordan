@@ -218,6 +218,7 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bootmenu/config/bootmenu_bypass:system/bootmenu/config/bootmenu_bypass \
 	device/motorola/jordan/proprietary/bootmenu/config/default.prop:system/bootmenu/config/default.prop \
 	device/motorola/jordan/proprietary/bootmenu/config/default_bootmode.conf:system/bootmenu/config/default_bootmode.conf \
+	device/motorola/jordan/proprietary/bootmenu/config/overclock.conf:system/bootmenu/config/overclock.conf \
 	device/motorola/jordan/proprietary/bootmenu/ext/su:system/bootmenu/ext/su \
 	device/motorola/jordan/proprietary/bootmenu/ext/Superuser.apk:system/bootmenu/ext/Superuser.apk \
 	device/motorola/jordan/proprietary/bootmenu/images/icon_error.png:system/bootmenu/images/icon_error.png \
