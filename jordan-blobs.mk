@@ -201,7 +201,7 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/app/LocationProxyDmPlugin.apk:system/app/LocationProxyDmPlugin.apk \
 	device/motorola/jordan/proprietary/app/FMRadio.apk:system/app/FMRadio.apk \
 	device/motorola/jordan/proprietary/app/FMRadioService.apk:system/app/FMRadioService.apk \
-	device/motorola/jordan/proprietary/app/basebandswitcherV3.1.apk:system/app/basebandswitcherV3.1.apk \
+	device/motorola/jordan/proprietary/app/basebandswitcherV4.0.apk:system/app/basebandswitcherV4.0.apk \
 	device/motorola/jordan/proprietary/app/MotoPhonePortal.apk:system/app/MotoPhonePortal.apk 
 
 #Bootmenu
