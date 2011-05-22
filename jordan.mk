@@ -31,7 +31,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.media.capture.flip=horizontalandvertical \
 	ro.media.capture.flashIntensity=41 \
 	ro.media.capture.torchIntensity=25 \
-	persist.sys.omap_dss_mode=1 \
 	ro.mtp_available=0 \
 	persist.sys.purgeable_assets=0 \
 	ro.com.android.wifi-watchlist=GoogleGuest \
