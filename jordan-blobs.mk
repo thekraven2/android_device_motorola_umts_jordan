@@ -126,6 +126,7 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/etc/fmc_init_6450.2.bts:system/etc/fmc_init_6450.2.bts \
 	device/motorola/jordan/proprietary/etc/fm_rx_init_1273.2.bts:system/etc/fm_rx_init_1273.2.bts \
 	device/motorola/jordan/proprietary/etc/fm_rx_init_6450.2.bts:system/etc/fm_rx_init_6450.2.bts \
+	device/motorola/jordan/proprietary/etc/sysctl.conf:system/etc/sysctl.conf \
 	device/motorola/jordan/media_profiles.xml:system/etc/media_profiles.xml \
 	device/motorola/jordan/proprietary/etc/init.d/05mountsd:system/etc/init.d/05mountsd \
 	device/motorola/jordan/recovery.fstab:system/etc/recovery.fstab \
