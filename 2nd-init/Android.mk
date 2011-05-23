@@ -17,22 +17,21 @@ LOCAL_PATH := $(call my-dir)
 
 ifneq ($(TARGET_SIMULATOR),true)
 
-
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := 2nd-init.test
+LOCAL_MODULE := 2nd-init-test
+
 LOCAL_MODULE_TAGS := optional eng
-LOCAL_MODULE_PATH := $(TARGET_OUT)/bootmenu/binary
+
+LOCAL_MODULE_PATH := $(TARGET_OUT)/system/bootmenu/binary
+
+LOCAL_CFLAGS := -DLOG_TAG=\"Sensors\"
 
 LOCAL_SRC_FILES := 2nd-init.c
 
-LOCAL_FORCE_STATIC_EXECUTABLE := true
-LOCAL_STATIC_LIBRARIES += libc libcutils
-
-# LOCAL_SHARED_LIBRARIES := libc libcutils
-# LOCAL_PRELINK_MODULE := false
+LOCAL_SHARED_LIBRARIES := libc libcutils
+LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_EXECUTABLE)
-
 
 endif # !TARGET_SIMULATOR
