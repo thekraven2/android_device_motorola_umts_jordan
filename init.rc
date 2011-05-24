@@ -241,8 +241,7 @@ on boot
     write /proc/sys/vm/min_free_order_shift 4
     write /proc/sys/vm/min_free_kbytes 4096
 
-    #for test with sysctl.conf
-    #write /sys/module/lowmemorykiller/parameters/minfree 2048,3072,6144,7168,8192,8192
+    write /sys/module/lowmemorykiller/parameters/minfree 2048,3072,6144,7168,8192,8192
 
     # Set init its forked children's oom_adj.
     write /proc/1/oom_adj -16

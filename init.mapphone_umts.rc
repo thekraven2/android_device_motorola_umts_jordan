@@ -201,8 +201,7 @@ on boot
 
 # Overwrite what init.rc selected for the memory killer params to match above.
 
-   #commented for a test with sysctl.conf
-   # write /sys/module/lowmemorykiller/parameters/minfree 3072,4608,9216,10752,12288,12288
+      write /sys/module/lowmemorykiller/parameters/minfree 3072,4608,9216,10752,12288,12288
 
 # Change the ownership of led files.
    chown system system /sys/class/leds/lcd-backlight/als
