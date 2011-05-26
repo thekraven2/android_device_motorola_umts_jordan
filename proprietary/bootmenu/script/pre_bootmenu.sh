@@ -1,6 +1,6 @@
 #!/system/bin/sh
 
-######## BootMenu Script v0.8.3
+######## BootMenu Script v0.8.6
 ######## Execute Pre BootMenu
 
 
@@ -15,15 +15,14 @@ BUSYBOX="/sbin/busybox"
 # RECOVERY tool includes busybox
 cp -f /system/bootmenu/recovery/sbin/recovery $BUSYBOX
 
-$BUSYBOX chmod 755 /sbin/
-$BUSYBOX chown 0.0 /sbin/busybox
-$BUSYBOX chmod 4755 /sbin/busybox
-
+chmod 755 /sbin
+$BUSYBOX chown 0.0 $BUSYBOX
+$BUSYBOX chmod 4755 $BUSYBOX
 
 ## begin busybox sym link..
 
-for cmd in $(/sbin/busybox --list); do
-  /sbin/busybox ln -s /sbin/busybox /sbin/$cmd
+for cmd in $($BUSYBOX --list); do
+  $BUSYBOX ln -s /sbin/busybox /sbin/$cmd
 done
 
 # disable some duplicate busybox applets

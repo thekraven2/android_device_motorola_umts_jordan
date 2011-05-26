@@ -1,12 +1,18 @@
 #!/sbin/sh
 
-######## BootMenu Script v0.8.3
+######## BootMenu Script v0.8.6
 ######## Execute [2nd-init] Menu
 
 
 export PATH=/sbin:/system/xbin:/system/bin
 
 ######## Main Script
+
+
+echo 1 > /sys/class/leds/green/brightness
+usleep 500
+echo 0 > /sys/class/leds/green/brightness
+
 
 rm /*.rc
 cp -r -f /system/bootmenu/2nd-init/* /
@@ -18,12 +24,13 @@ umount /acct
 umount /mnt/asec
 umount /dev/cpuctl
 umount /dev/pts
+umount /mnt/obb
 
 
-## sbin cleanup
+# Cleanup
+
 rm /sbin/lsof
 #rm /sbin/adbd.root
-
 
 ## busybox cleanup..
 for cmd in $(/sbin/busybox --list); do
@@ -32,6 +39,7 @@ done
 
 rm /sbin/busybox
 
+rm -f /rootsh
 
 
 /system/bootmenu/binary/2nd-init
