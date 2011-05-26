@@ -141,17 +141,13 @@ on init
     chown mot_tpapi mot_tpapi /data/tpapi/etc/tpa
     chown mot_tpapi mot_tpapi /data/tpapi/etc/tpa/persistent
 
-# directory for encryption management tool, enc_mgt_tool
-#     mkdir /data/emt
-#     chmod 0700 /data/emt
-
     # Create wmdrm directory
     mkdir /pds/wmdrm 0775 mot_drm mot_drm
 
     # Temp workaround for HP library cleanup
     symlink /dev/hp3a-omap /dev/hp3A-omap
 	
-	# Enable ADB mode
+     # Enable ADB mode
      # write /dev/usb_device_mode msc_adb
 
 # Permissions for video
@@ -171,7 +167,6 @@ mount rootfs rootfs / ro remount
 
 on early-boot
 
-
 # Install BP related kernel modules
     #Start the engine modules for netmux first for other daemons depends on it
     insmod /system/lib/modules/netmux.ko
@@ -179,7 +174,7 @@ on early-boot
     insmod /system/lib/modules/sec.ko
     insmod /system/lib/modules/modem_pm_driver.ko
     insmod /system/lib/modules/kineto_gan.ko	
-	
+    insmod /system/lib/modules/tun.ko		
 
 # Adjust the out of memory thresholds to account for the larget
 # space on sholes. These numbers are in pages (4k). Must be kept
