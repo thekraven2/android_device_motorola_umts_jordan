@@ -1,10 +1,10 @@
-#/sbin/sh
-
+#!/sbin/sh
 # exit from recovery, back to bootmenu
 
-export PATH=/sbin
+export PATH=/sbin:/system/xbin:/system/bin
 
-BUSYBOX=/sbin/busybox
+echo 0 > /sys/class/leds/green/brightness
+echo 0 > /sys/class/leds/red/brightness
+echo 1 > /sys/class/leds/blue/brightness
 
-$BUSYBOX mount -t ext3 -o rw,noatime,nodiratime /dev/block/mmcblk1p21 /system
-
+[ ! -f /system/build.prop ] && mount -t ext3 -o rw,noatime,nodiratime /dev/block/mmcblk1p21 /system
