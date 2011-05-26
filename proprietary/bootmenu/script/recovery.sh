@@ -110,7 +110,7 @@ else
 	echo 1 > /sys/class/leds/red/brightness
 	echo 0 > /sys/class/leds/green/brightness
 	echo 0 > /sys/class/leds/blue/brightness
-endif
+fi
 
 # bootmenu doesnt support buttons (turn off buttons light)
 echo 0 > /sys/class/leds/button-backlight/brightness
