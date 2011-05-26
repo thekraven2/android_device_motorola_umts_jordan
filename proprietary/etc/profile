@@ -1,0 +1,14 @@
+[ -f /etc/banner ] && cat /etc/banner
+
+export PS1='\u@\h:\w\$ '
+ENV=/
+[ -d /sdcard ]     && ENV=/sd-ext/.profile
+[ -d /sd-ext ]     && ENV=/sd-ext/.profile
+[ -d /sdcard-ext ] && ENV=/sdcard-ext/.profile
+
+export ENV
+
+alias l='ls -al'
+
+alias findinfiles='find . -type f | grep -v "LOST.DIR" '
+
