@@ -24,4 +24,6 @@ mount -o remount,ro rootfs /
 mount -o remount,ro /dev/block/mmcblk1p21 /system
 ##################################################
 
+echo 0 > /sys/class/leds/blue/brightness
+
 exit

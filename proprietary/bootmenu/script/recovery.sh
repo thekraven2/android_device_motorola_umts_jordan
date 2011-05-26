@@ -31,7 +31,7 @@ chmod 755 /sbin
 chmod 755 /res
 
 cp -r -f /system/bootmenu/recovery/res/* /res/
-cp -r -f /system/bootmenu/recovery/sbin/* /sbin/
+cp -f /system/bootmenu/recovery/sbin/* /sbin/
 
 chmod 755 /sbin/*
 
@@ -80,11 +80,13 @@ mount -t ext3 -o rw,noatime,nodiratime /dev/block/mmcblk1p21 /system
 [ ! -f /system/build.prop ] && mount -o rw /dev/block/mmcblk1p21 /system
 
 # set red led if problem with system, green led else
+
 echo 0 > /sys/class/leds/red/brightness
 echo 0 > /sys/class/leds/green/brightness
 echo 0 > /sys/class/leds/blue/brightness
 [ ! -f /system/build.prop ] && echo 1 > /sys/class/leds/red/brightness
 [ -f /system/build.prop ] && echo 1 > /sys/class/leds/green/brightness
+
 usleep 100
 
 #############################
