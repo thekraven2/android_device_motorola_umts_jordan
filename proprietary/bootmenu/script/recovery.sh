@@ -100,9 +100,14 @@ echo 1 > /sys/class/leds/button-backlight/brightness
 
 # Post Recovery (back to bootmenu)
 
-[ ! -f /system/build.prop ] && mount -t ext3 -o rw,noatime,nodiratime /dev/block/mmcblk1p21 /system
+# bootmenu doesnt support buttons
+echo 0 > /sys/class/leds/button-backlight/brightness
 
-if [ -f /system/build.prop ]; then
+# remount system & data if unmounted
+[ ! -d /data/data ] &&         mount -t ext3 -o rw,noatime,nodiratime,errors=continue /dev/block/userdata /data
+[ ! -f /system/build.prop ] && mount -t ext3 -o rw,noatime,nodiratime,errors=continue /dev/block/system /system
+
+if [ -f /system/build.prop ] ; then
 	echo 0 > /sys/class/leds/red/brightness
 	echo 0 > /sys/class/leds/green/brightness
 	echo 1 > /sys/class/leds/blue/brightness
@@ -112,7 +117,5 @@ else
 	echo 0 > /sys/class/leds/blue/brightness
 fi
 
-# bootmenu doesnt support buttons (turn off buttons light)
-echo 0 > /sys/class/leds/button-backlight/brightness
 
 exit

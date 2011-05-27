@@ -13,19 +13,22 @@ do
     sleep 1
 done
 
-busybox mount -o remount,rw /
+mount -o remount,rw rootfs /
 rm -r /tmp
 mkdir -p tmp
+touch /tmp/recovery.log
 rm sdcard
 mkdir sdcard
 
 
-mount -o remount,rw /
-busybox kill $(busybox ps | busybox grep adbd)
-echo msc_adb > /dev/usb_device_mode
-touch /tmp/recovery.log
+## ???
+
+# busybox kill $(busybox ps | busybox grep adbd)
+# killall adbd
+# echo msc_adb > /dev/usb_device_mode
+# kill $(ps | grep /sbin/adbd)
+#killall adbd
 
 sync
-kill $(ps | grep /sbin/adbd)
 
-/sbin/adbd recovery &
+# /sbin/adbd recovery &
