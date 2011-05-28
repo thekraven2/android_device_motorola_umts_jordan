@@ -256,7 +256,7 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/mke2fs.bin:system/bootmenu/recovery/sbin/mke2fs.bin \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/tune2fs:system/bootmenu/recovery/sbin/tune2fs \
 	device/motorola/jordan/proprietary/bootmenu/recovery/sbin/tune2fs.bin:system/bootmenu/recovery/sbin/tune2fs.bin \
-	device/motorola/jordan/proprietary/bootmenu/binary/lsof.static:system/bootmenu/recovery/sbin/lsof \
+	device/motorola/jordan/proprietary/bootmenu/binary/lsof.static:system/bootmenu/binary/lsof \
 	device/motorola/jordan/proprietary/bootmenu/recovery/recovery.fstab:system/bootmenu/recovery/recovery.fstab \
 	device/motorola/jordan/proprietary/bootmenu/script/2nd-init.sh:system/bootmenu/script/2nd-init.sh \
 	device/motorola/jordan/proprietary/bootmenu/script/2nd-boot.sh:system/bootmenu/script/2nd-boot.sh \

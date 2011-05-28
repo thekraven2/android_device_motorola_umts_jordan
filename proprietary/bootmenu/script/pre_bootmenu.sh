@@ -56,4 +56,8 @@ cp -f /system/bootmenu/binary/adbd /sbin/adbd.root
 chmod 4755 /sbin/adbd.root
 chown 0.0 /sbin/adbd.root
 
+## add lsof to debug locks
+
+cp -f /system/bootmenu/binary/lsof /sbin/lsof
+
 exit
