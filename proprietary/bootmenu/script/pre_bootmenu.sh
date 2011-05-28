@@ -5,6 +5,7 @@
 
 
 export PATH=/sbin:/system/xbin:/system/bin
+i
 
 ######## Main Script
 
@@ -15,18 +16,31 @@ BUSYBOX="/sbin/busybox"
 # RECOVERY tool includes busybox
 cp -f /system/bootmenu/recovery/sbin/recovery $BUSYBOX
 
+# add lsof to debug locks
+cp -f /system/bootmenu/binary/lsof /sbin/lsof
+
 chmod 755 /sbin
 $BUSYBOX chown 0.0 $BUSYBOX
 $BUSYBOX chmod 4755 $BUSYBOX
 
-## begin busybox sym link..
+# busybox sym link..
 
 for cmd in $($BUSYBOX --list); do
   $BUSYBOX ln -s /sbin/busybox /sbin/$cmd
 done
 
-# disable some duplicate busybox applets
+busybox chmod -R +x /sbin
+
+# replace /sbin/adbd..
+
+cp -f /system/bootmenu/binary/adbd /sbin/adbd.root
+busybox chmod 4755 /sbin/adbd.root
+chown 0.0 /sbin/adbd.root
+
+
+# disable some busybox applets we dont want
 [ -f /sbin/reboot ] && rm /sbin/reboot
+
 
 ## make a link to allow 2nd-boot menu option
 OLD_DIR=`pwd`
@@ -49,15 +63,5 @@ chmod 6755 /rootsh
 rm -f /default.prop
 cp -f /system/bootmenu/config/default.prop /default.prop
 
-
-## /sbin/adbd replace..
-
-cp -f /system/bootmenu/binary/adbd /sbin/adbd.root
-chmod 4755 /sbin/adbd.root
-chown 0.0 /sbin/adbd.root
-
-## add lsof to debug locks
-
-cp -f /system/bootmenu/binary/lsof /sbin/lsof
 
 exit
