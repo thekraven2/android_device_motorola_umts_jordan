@@ -346,11 +346,11 @@ service hciattach_rfmd /system/bin/hciattach -n -t 10 /dev/ttyS1 texasalt_rfmd 3
    group bluetooth net_bt_admin
    disabled
 
-service btdhcpd /system/bin/dnsmasq -C /etc/btpan.conf
-    class post-zygote_services
-    user root
-    disabled
-    oneshot
+#service btdhcpd /system/bin/dnsmasq -C /etc/btpan.conf
+#    class post-zygote_services
+#    user root
+#    disabled
+#    oneshot
 
 service map /system/bin/sdptool add --channel=20 --network=1 MAP
     class post-zygote_services
@@ -498,10 +498,10 @@ service fmradio /system/bin/fmradioserver
     group bluetooth
 
 #start Authentec VPN service
-service vpnclientpm /system/bin/vpnclientpm
-    class post-zygote_services
-    oneshot
-    user root
+#service vpnclientpm /system/bin/vpnclientpm
+#    class post-zygote_services
+#    oneshot
+#    user root
 
 #IKCBS-226 start RescueStarter for MobileRescue
 #service RescueStarter /system/bin/RescueStarter
