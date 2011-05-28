@@ -31,7 +31,8 @@ chmod 755 /sbin
 chmod 755 /res
 
 cp -r -f /system/bootmenu/recovery/res/* /res/
-cp -f /system/bootmenu/recovery/sbin/* /sbin/
+cp -p -f /system/bootmenu/recovery/sbin/* /sbin/
+cp -p -f /system/bootmenu/script/recoveryexit.sh /sbin/
 
 chmod 755 /sbin/*
 
