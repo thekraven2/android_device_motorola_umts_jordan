@@ -103,7 +103,9 @@ PRODUCT_COPY_FILES += \
     device/motorola/jordan/proprietary/lib/libfmradioplayer.so:system/lib/libfmradioplayer.so \
     device/motorola/jordan/proprietary/lib/liboemcamera.so:system/lib/liboemcamera.so \
     device/motorola/jordan/proprietary/lib/libpanic_daemon.so:system/lib/libpanic_daemon.so \
-    device/motorola/jordan/proprietary/lib/libbridge.so:system/lib/libbridge.so 
+    device/motorola/jordan/proprietary/lib/libbridge.so:system/lib/libbridge.so \
+    device/motorola/jordan/proprietary/lib/modules/modules.alias:system/lib/modules/modules.alias \
+    device/motorola/jordan/proprietary/lib/modules/modules.dep:system/lib/modules/modules.dep
 
 #etc
 PRODUCT_COPY_FILES += \
