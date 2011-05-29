@@ -5,7 +5,7 @@
 
 
 export PATH=/sbin:/system/xbin:/system/bin
-i
+
 
 ######## Main Script
 
