@@ -74,7 +74,7 @@ umount -l /system
 umount -l /data
 #umount -l /cache
 
-usleep 500
+usleep 5000
 mount -t ext3 -o rw,noatime,nodiratime /dev/block/mmcblk1p21 /system
 
 # retry without type & options if not mounted
@@ -88,7 +88,7 @@ echo 0 > /sys/class/leds/blue/brightness
 [ ! -f /system/build.prop ] && echo 1 > /sys/class/leds/red/brightness
 [ -f /system/build.prop ] && echo 1 > /sys/class/leds/green/brightness
 
-usleep 100
+usleep 10000
 
 #############################
 

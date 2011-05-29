@@ -10,7 +10,7 @@ export PATH=/sbin:/system/xbin:/system/bin
 
 
 echo 1 > /sys/class/leds/green/brightness
-usleep 500
+usleep 50000
 echo 0 > /sys/class/leds/green/brightness
 
 
