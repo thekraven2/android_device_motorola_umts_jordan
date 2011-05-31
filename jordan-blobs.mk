@@ -96,7 +96,6 @@ PRODUCT_COPY_FILES += \
     device/motorola/jordan/proprietary/lib/libOMX.TI.720P.Encoder.so:system/lib/libOMX.TI.720P.Encoder.so \
     device/motorola/jordan/proprietary/lib/libOMX.TI.mp4.splt.Encoder.so:system/lib/libOMX.TI.mp4.splt.Encoder.so \
     device/motorola/jordan/proprietary/lib/libOMX.TI.h264.splt.Encoder.so:system/lib/libOMX.TI.h264.splt.Encoder.so \
-    device/motorola/jordan/proprietary/lib/hw/overlay.omap3.so:system/lib/hw/overlay.omap3.so \
     device/motorola/jordan/proprietary/lib/libLCML.so:system/lib/libLCML.so \
     device/motorola/jordan/proprietary/lib/libFMRadio.so:system/lib/libFMRadio.so \
     device/motorola/jordan/proprietary/lib/libfmradio_jni.so:system/lib/libfmradio_jni.so \
