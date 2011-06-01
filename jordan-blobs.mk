@@ -204,7 +204,7 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/app/FMRadio.apk:system/app/FMRadio.apk \
 	device/motorola/jordan/proprietary/app/FMRadioService.apk:system/app/FMRadioService.apk \
 	device/motorola/jordan/proprietary/app/basebandswitcherV4.0.apk:system/app/basebandswitcherV4.0.apk \
-	device/motorola/jordan/proprietary/app/MotoPhonePortal.apk:system/app/MotoPhonePortal.apk 
+	device/motorola/jordan/proprietary/app/MotoPhonePortal.apk:system/app/MotoPhonePortal.apk
 
 #Bootmenu
 PRODUCT_COPY_FILES += \
@@ -278,3 +278,6 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/proprietary/bootmenu/ext/modules/overclock_defy.ko:system/bootmenu/ext/modules/overclock_defy.ko \
 	device/motorola/jordan/proprietary/bootmenu/ext/modules/symsearch.ko:system/bootmenu/ext/modules/symsearch.ko
 
+#extra
+PRODUCT_COPY_FILES += \
+	device/motorola/jordan/proprietary/media/Moto.ogg:system/media/audio/ringtones/Moto.ogg
