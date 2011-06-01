@@ -3,9 +3,10 @@ on init
 # Backward compatibility
     symlink /dev /dev/netmux
 
-	# prepare generic keypad name
+# prepare generic keypad name
     exec /init_prep_keypad.sh
-    mount ext3 mmc@system /system ro noatime nodiratime remount
+
+   #mount ext3 mmc@system /system ro noatime nodiratime remount
 
     mount rootfs rootfs / rw remount
 
@@ -148,7 +149,7 @@ on init
     symlink /dev/hp3a-omap /dev/hp3A-omap
 	
      # Enable ADB mode
-     # write /dev/usb_device_mode msc_adb
+      write /dev/usb_device_mode msc_adb
 
 # Permissions for video
     chmod 0770 /dev/hp3a-omap
@@ -174,6 +175,7 @@ on early-boot
     insmod /system/lib/modules/sec.ko
     insmod /system/lib/modules/modem_pm_driver.ko
     insmod /system/lib/modules/kineto_gan.ko	
+    insmod /system/lib/modules/vpnclient.ko
     insmod /system/lib/modules/tun.ko		
 
 # Adjust the out of memory thresholds to account for the larget
@@ -221,7 +223,7 @@ on boot
    chmod 0660 /sys/class/leds/blue/brightness
    chmod 0660 /sys/class/leds/torch-flash/camera_strobe
    chmod 0660 /sys/class/leds/torch-flash/flash_light
-   chown system system /sys/class/leds/torch-flash/camera_strobe
+   chown system system cache/sys/class/leds/torch-flash/camera_strobe
    chown system system /sys/class/leds/torch-flash/flash_light
    chown system system /sys/class/leds/spotlight/brightness
    chmod 0660 /sys/class/backlight/adp8870_bl/brightness
@@ -241,12 +243,13 @@ on boot
 
 # Enable panic on softlockup
     write /proc/sys/kernel/softlockup_panic 1
-# Load Authentec VPN kernel module
-    insmod /system/lib/modules/vpnclient.ko
+
 # Start services
     exec /system/bin/mot_boot_mode
+
 # Set core max size (2G)
     setrlimit 4 2147483648 2147483648
+
 # The properties introduced by moto
 on property:sys.chargeonly.mode=1
     start battd
@@ -275,6 +278,7 @@ on property:sys.shutdown=1
     stop ssmgrd
     exec /system/bin/sleep 10
     exec /system/bin/reboot -p
+
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
@@ -320,7 +324,7 @@ service battd /system/bin/battd
     group mot_accy mot_pwric
     oneshot
 
-   service bplogd_daemon /system/bin/bplogd_daemon
+service bplogd_daemon /system/bin/bplogd_daemon
     class pre-zygote_services
     socket dlog_cmds stream 660 radio log
     socket bp_pd_status stream 660 radio log
@@ -329,12 +333,12 @@ service battd /system/bin/battd
     group radio inet log sdcard_rw mount
     oneshot
 
-    service ssmgrd /system/xbin/ssmgrd
+service ssmgrd /system/xbin/ssmgrd
     class post-zygote_services
     group radio input mot_pwric
     oneshot
 
-    service hciattach /system/bin/hciattach -n -t 10 /dev/ttyS1 texasalt 3000000 flow
+service hciattach /system/bin/hciattach -n -t 10 /dev/ttyS1 texasalt 3000000 flow
     class post-zygote_services
     user bluetooth
     group bluetooth net_bt_admin
@@ -390,25 +394,25 @@ on property:tcmd.unload_wlan=2
     setprop wlan.driver.status unloaded
 
 # turn on bluetooth for FM tcmd
-on property:tcmd.fm_mod=1
-    stop hciattach
-    stop hciattach_rfmd
-    start bt_init
+#on property:tcmd.fm_mod=1
+#    stop hciattach
+#    stop hciattach_rfmd
+#    start bt_init
 # turn off bluetooth for FM tcmd
-on property:tcmd.fm_mod=0
-    stop hciattach
-    stop hciattach_rfmd
+#on property:tcmd.fm_mod=0
+#    stop hciattach
+#    stop hciattach_rfmd
 # turn on bluetooth for tcmd
-on property:tcmd.bt_mod=1
-    stop hciattach
-    stop hciattach_rfmd
-    insmod /system/lib/modules/wl127x_test.ko
+#on property:tcmd.bt_mod=1
+#    stop hciattach
+#    stop hciattach_rfmd
+#    insmod /system/lib/modules/wl127x_test.ko
 #turn off bluetooth for tcmd
-on property:tcmd.bt_mod=0
-    exec /system/bin/rmmod wl127x_test
+#on property:tcmd.bt_mod=0
+#    exec /system/bin/rmmod wl127x_test
 #execute tcmdhelp
-on property:tcmd.start_tcmdhelp=1
-    start tcmdhelp
+#on property:tcmd.start_tcmdhelp=1
+#    start tcmdhelp
 	
 service panic_daemon /system/bin/panic_daemon
     class post-zygote_services
@@ -416,8 +420,8 @@ service panic_daemon /system/bin/panic_daemon
     group log radio system graphics sdcard_rw
     socket panic_daemon stream 660 radio radio
     onrestart exec /system/bin/reboot
-# Ecompass daemon
 
+# Ecompass daemon
 service akmd2 /system/bin/akmd2
     class post-zygote_services
     user compass
