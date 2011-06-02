@@ -174,8 +174,8 @@ on early-boot
     insmod /system/lib/modules/netmux_linkdriver.ko
     insmod /system/lib/modules/sec.ko
     insmod /system/lib/modules/modem_pm_driver.ko
-    insmod /system/lib/modules/kineto_gan.ko	
-    insmod /system/lib/modules/vpnclient.ko
+    #insmod /system/lib/modules/kineto_gan.ko	
+    #insmod /system/lib/modules/vpnclient.ko
     insmod /system/lib/modules/tun.ko		
 
 # Adjust the out of memory thresholds to account for the larget
@@ -282,9 +282,9 @@ on property:sys.shutdown=1
 on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
 
-service telnet /system/bin/telnetd
-    class pre-zygote_services
-    oneshot
+#service telnet /system/bin/telnetd
+#    class pre-zygote_services
+#    oneshot
 	
 service usbd /system/bin/usbd
     class pre-zygote_services
@@ -480,9 +480,9 @@ service locDrv /system/bin/brcm_guci_drv -config /system/etc/gpsconfig.xml
     user radio
     group radio inet sdcard_rw
 	
-service modemlog /system/bin/modemlog
-   class pre-zygote_services
-   oneshot
+#service modemlog /system/bin/modemlog
+#   class pre-zygote_services
+#   oneshot
 
 # aplogd is controlled by the persist.service.aplogd.enable system property
 #service aplogd /system/bin/aplogd
