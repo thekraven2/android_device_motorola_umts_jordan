@@ -149,7 +149,7 @@ on init
     symlink /dev/hp3a-omap /dev/hp3A-omap
 	
      # Enable ADB mode
-     # write /dev/usb_device_mode msc_adb
+    write /dev/usb_device_mode msc_adb
 
 # Permissions for video
     chmod 0770 /dev/hp3a-omap
@@ -324,14 +324,14 @@ service battd /system/bin/battd
     group mot_accy mot_pwric
     oneshot
 
-service bplogd_daemon /system/bin/bplogd_daemon
-    class pre-zygote_services
-    socket dlog_cmds stream 660 radio log
-    socket bp_pd_status stream 660 radio log
-    socket bp_aol_cmd stream 666 radio log
-    user radio
-    group radio inet log sdcard_rw mount
-    oneshot
+#service bplogd_daemon /system/bin/bplogd_daemon
+#    class pre-zygote_services
+#    socket dlog_cmds stream 660 radio log
+#    socket bp_pd_status stream 660 radio log
+#    socket bp_aol_cmd stream 666 radio log
+#    user radio
+#    group radio inet log sdcard_rw mount
+#    oneshot
 
 service ssmgrd /system/xbin/ssmgrd
     class post-zygote_services
