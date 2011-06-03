@@ -149,11 +149,7 @@ on init
     symlink /dev/hp3a-omap /dev/hp3A-omap
 	
      # Enable ADB mode
-<<<<<<< HEAD
-    #  write /dev/usb_device_mode msc_adb
-=======
-     # write /dev/usb_device_mode msc_adb
->>>>>>> parent of e2c8f18... disable bplogd_daemon
+     #  write /dev/usb_device_mode msc_adb
 
 # Permissions for video
     chmod 0770 /dev/hp3a-omap
