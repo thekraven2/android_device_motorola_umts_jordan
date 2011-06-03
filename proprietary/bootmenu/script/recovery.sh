@@ -71,10 +71,10 @@ fi
 #############################
 # mount in /sbin/postrecoveryboot.sh
 umount -l /system
-umount -l /data
+#umount -l /data
 #umount -l /cache
 
-usleep 5000
+usleep 50000
 mount -t ext3 -o rw,noatime,nodiratime /dev/block/mmcblk1p21 /system
 
 # retry without type & options if not mounted
@@ -86,9 +86,7 @@ echo 0 > /sys/class/leds/red/brightness
 echo 0 > /sys/class/leds/green/brightness
 echo 0 > /sys/class/leds/blue/brightness
 [ ! -f /system/build.prop ] && echo 1 > /sys/class/leds/red/brightness
-[ -f /system/build.prop ] && echo 1 > /sys/class/leds/green/brightness
-
-usleep 10000
+# [ -f /system/build.prop ] && echo 1 > /sys/class/leds/green/brightness
 
 #############################
 
