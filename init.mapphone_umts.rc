@@ -149,7 +149,7 @@ on init
     symlink /dev/hp3a-omap /dev/hp3A-omap
 	
      # Enable ADB mode
-    write /dev/usb_device_mode msc_adb
+    #  write /dev/usb_device_mode msc_adb
 
 # Permissions for video
     chmod 0770 /dev/hp3a-omap
@@ -174,7 +174,7 @@ on early-boot
     insmod /system/lib/modules/netmux_linkdriver.ko
     insmod /system/lib/modules/sec.ko
     insmod /system/lib/modules/modem_pm_driver.ko
-    #insmod /system/lib/modules/kineto_gan.ko	
+    insmod /system/lib/modules/kineto_gan.ko	
     #insmod /system/lib/modules/vpnclient.ko
     insmod /system/lib/modules/tun.ko		
 
