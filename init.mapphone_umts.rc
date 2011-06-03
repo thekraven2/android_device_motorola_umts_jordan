@@ -394,25 +394,25 @@ on property:tcmd.unload_wlan=2
     setprop wlan.driver.status unloaded
 
 # turn on bluetooth for FM tcmd
-#on property:tcmd.fm_mod=1
-#    stop hciattach
-#    stop hciattach_rfmd
-#    start bt_init
+on property:tcmd.fm_mod=1
+    stop hciattach
+    stop hciattach_rfmd
+    start bt_init
 # turn off bluetooth for FM tcmd
-#on property:tcmd.fm_mod=0
-#    stop hciattach
-#    stop hciattach_rfmd
+on property:tcmd.fm_mod=0
+    stop hciattach
+    stop hciattach_rfmd
 # turn on bluetooth for tcmd
-#on property:tcmd.bt_mod=1
-#    stop hciattach
-#    stop hciattach_rfmd
-#    insmod /system/lib/modules/wl127x_test.ko
+on property:tcmd.bt_mod=1
+    stop hciattach
+    stop hciattach_rfmd
+    insmod /system/lib/modules/wl127x_test.ko
 #turn off bluetooth for tcmd
-#on property:tcmd.bt_mod=0
-#    exec /system/bin/rmmod wl127x_test
+on property:tcmd.bt_mod=0
+    exec /system/bin/rmmod wl127x_test
 #execute tcmdhelp
-#on property:tcmd.start_tcmdhelp=1
-#    start tcmdhelp
+on property:tcmd.start_tcmdhelp=1
+    start tcmdhelp
 	
 service panic_daemon /system/bin/panic_daemon
     class post-zygote_services
