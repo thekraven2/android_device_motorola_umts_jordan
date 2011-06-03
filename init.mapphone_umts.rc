@@ -414,12 +414,12 @@ on property:tcmd.unload_wlan=2
 #on property:tcmd.start_tcmdhelp=1
 #    start tcmdhelp
 	
-#service panic_daemon /system/bin/panic_daemon
-#    class post-zygote_services
-#    user radio
-#    group log radio system graphics sdcard_rw
-#    socket panic_daemon stream 660 radio radio
-#    onrestart exec /system/bin/reboot
+service panic_daemon /system/bin/panic_daemon
+    class post-zygote_services
+    user radio
+    group log radio system graphics sdcard_rw
+    socket panic_daemon stream 660 radio radio
+    onrestart exec /system/bin/reboot
 
 # Ecompass daemon
 service akmd2 /system/bin/akmd2
@@ -463,7 +463,6 @@ service baseimage /system/bin/dspexec -v -T /system/lib/dsp/baseimage.dof
     user media
     group media graphics
     oneshot
-
 service pvrsrv /system/bin/pvrsrvinit
     class post-zygote_services
     user root
@@ -502,3 +501,14 @@ service fmradio /system/bin/fmradioserver
     disabled
     group bluetooth
 
+#start Authentec VPN service
+#service vpnclientpm /system/bin/vpnclientpm
+#    class post-zygote_services
+#    oneshot
+#    user root
+
+#IKCBS-226 start RescueStarter for MobileRescue
+#service RescueStarter /system/bin/RescueStarter
+#    user nobody
+#    group input graphics
+#    class post-zygote_services
