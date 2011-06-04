@@ -38,7 +38,6 @@ loglevel 3
     mkdir /system
     mkdir /data 0771 system system
     mkdir /cache 0771 system cache
-    mkdir /cache/download 0777 system cache
 
 #    mkdir /config 0500 root root
 
@@ -131,6 +130,7 @@ loglevel 3
     exec /system/bin/logwrapper /system/bin/mount_ext3.sh cache /cache
     chown system cache /cache
     chmod 0771 /cache
+    mkdir /cache/download 0777 system cache
 
     # This may have been created by the recovery system with odd permissions
     chown system cache /cache/recovery
