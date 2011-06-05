@@ -93,13 +93,11 @@ PRODUCT_COPY_FILES += \
     device/motorola/jordan/proprietary/lib/libOMX.TI.720P.Encoder.so:system/lib/libOMX.TI.720P.Encoder.so \
     device/motorola/jordan/proprietary/lib/libOMX.TI.mp4.splt.Encoder.so:system/lib/libOMX.TI.mp4.splt.Encoder.so \
     device/motorola/jordan/proprietary/lib/libOMX.TI.h264.splt.Encoder.so:system/lib/libOMX.TI.h264.splt.Encoder.so \
-
     device/motorola/jordan/proprietary/lib/libFMRadio.so:system/lib/libFMRadio.so \
     device/motorola/jordan/proprietary/lib/libfmradio_jni.so:system/lib/libfmradio_jni.so \
     device/motorola/jordan/proprietary/lib/libfmradioplayer.so:system/lib/libfmradioplayer.so \
     device/motorola/jordan/proprietary/lib/liboemcamera.so:system/lib/liboemcamera.so \
     device/motorola/jordan/proprietary/lib/libpanic_daemon.so:system/lib/libpanic_daemon.so \
-
     device/motorola/jordan/proprietary/lib/modules/modules.alias:system/lib/modules/modules.alias \
     device/motorola/jordan/proprietary/lib/modules/modules.dep:system/lib/modules/modules.dep
 
