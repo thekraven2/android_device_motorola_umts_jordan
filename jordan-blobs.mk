@@ -18,7 +18,8 @@
 # media config xml file
 
 PRODUCT_COPY_FILES += \
-	device/motorola/jordan/qwerty.kl:system/usr/keylayout/qwerty.kl
+	device/motorola/jordan/qwerty.kl:system/usr/keylayout/qwerty.kl \
+	device/motorola/jordan/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin
 
 #bin
 PRODUCT_COPY_FILES += \
