@@ -27,11 +27,12 @@ ro.opengles.version = 131072
 dalvik.vm.heapsize=40m
 debug.sf.hw=1
 
-# Enable warmboot
-ro.warmboot.capability=1
+# Disable Manual Deep suspend in shutdown menu (some work to do..)
+ro.warmboot.capability=0
 
-# Forbid format of these partitions in mount menu :
+# Forbid format of these partitions in mount menu (use only rm -r) 
+# TODO: this prop is not loaded at bootmenu time (hardcoded in recovery-defy) 
 ro.cwm.forbid_format=/misc,/radio,/boot,/recovery,/pds,/system
 
-# BatteryLight while charging, enabled by default.
-ro.battery_light=true
+# BatteryLight while charging, enabled by default (disabled in nighlies).
+ro.battery_light=false
