@@ -17,3 +17,4 @@ lib/modules/tiap_drv.ko
 lib/modules/tiwlan_drv.ko
 lib/modules/vpnclient.ko
 lib/modules/wl127x_test.ko
+bootmenu/config/overclock.conf
