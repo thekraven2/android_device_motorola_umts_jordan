@@ -180,6 +180,7 @@ on early-boot
     insmod /system/lib/modules/nls_utf8.ko	
     insmod /system/lib/modules/slow-work.ko	
     insmod /system/lib/modules/cifs.ko	
+
 # Adjust the out of memory thresholds to account for the larget
 # space on sholes. These numbers are in pages (4k). Must be kept
 # in sync with init.rc. This must be done before the regular init.rc
@@ -399,7 +400,6 @@ on property:tcmd.unload_wlan=2
 on property:tcmd.fm_mod=1
     stop hciattach
     stop hciattach_rfmd
-    start bt_init
 # turn off bluetooth for FM tcmd
 on property:tcmd.fm_mod=0
     stop hciattach
