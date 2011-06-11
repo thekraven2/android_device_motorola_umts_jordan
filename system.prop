@@ -38,7 +38,3 @@ ro.battery_light=false
 
 # disable Windows Media Sync Usb.apk mode
 ro.mtp_available=0
-
-# Forbid format of these partitions in mount menu (use only rm -r)
-ro.cwm.forbid_format=/misc,/radio,/boot,/recovery,/pds,/system,/data
-
