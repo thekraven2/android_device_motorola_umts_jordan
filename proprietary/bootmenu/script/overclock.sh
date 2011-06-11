@@ -4,8 +4,8 @@
 ######## Overclock.sh
 
 export PATH=/sbin:/system/xbin:/system/bin
-chmod 644 "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq"
-chmod 644 "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq"
+chmod 666 "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq"
+chmod 666 "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq"
 CONFIG_FILE="/system/bootmenu/config/overclock.conf"
 MODULE_DIR="/system/bootmenu/ext/modules"
 SCALING_GOVERNOR="/sys/devices/system/cpu/cpu0/cpufreq/scaling_governor"
