@@ -31,7 +31,7 @@ ro.warmboot.capability=0
 
 # Forbid format of these partitions in mount menu (use only rm -r) 
 # TODO: this prop is not loaded at bootmenu time (hardcoded in recovery-defy) 
-ro.cwm.forbid_format=/misc,/radio,/boot,/recovery,/pds,/system
+ro.cwm.forbid_format=/boot,/system,/data,/sd-ext
 
 # BatteryLight while charging, enabled by default (disabled in nighlies).
 ro.battery_light=false
