@@ -1,12 +1,14 @@
 #!/sbin/sh
 
-######## BootMenu Script v0.8.3
+######## BootMenu Script
 ######## Execute [Custom Recovery] Menu
 
 
 export PATH=/sbin:/system/xbin:/system/bin
 
 ######## Main Script
+
+stop
 
 # Moto 2.3.3 /tmp is a link to /data/tmp, bad thing !
 [ -L /tmp ] && rm /tmp

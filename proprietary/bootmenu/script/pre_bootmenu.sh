@@ -1,13 +1,14 @@
 #!/system/bin/sh
 
-######## BootMenu Script v0.8.6
+######## BootMenu Script
 ######## Execute Pre BootMenu
 
 
 export PATH=/sbin:/system/xbin:/system/bin
 
-
 ######## Main Script
+
+stop
 
 mount -o remount,rw rootfs /
 

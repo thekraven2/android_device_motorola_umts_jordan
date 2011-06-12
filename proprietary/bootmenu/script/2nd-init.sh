@@ -43,6 +43,8 @@ rm -f /rootsh
 
 ln -s /system/xbin/busybox /sbin/modprobe
 
+start
+
 /system/bootmenu/binary/2nd-init
 
 exit
