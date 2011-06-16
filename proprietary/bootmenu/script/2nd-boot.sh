@@ -9,9 +9,9 @@ export PATH=/sbin:/system/xbin:/system/bin
 ######## Main Script
 
 
-echo 1 > /sys/class/leds/red/brightness
-usleep 500000
-echo 0 > /sys/class/leds/red/brightness
+#echo 1 > /sys/class/leds/red/brightness
+#usleep 50000
+#echo 0 > /sys/class/leds/red/brightness
 
 
 rm /*.rc
