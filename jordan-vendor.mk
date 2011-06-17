@@ -16,97 +16,97 @@
 
 # Live wallpaper packages
 PRODUCT_PACKAGES := \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    MagicSmokeWallpapers \
-    VisualizationWallpapers \
-    librs_jni
+	LiveWallpapers \
+	LiveWallpapersPicker \
+	MagicSmokeWallpapers \
+	VisualizationWallpapers \
+	librs_jni
 
 # Publish that we support the live wallpaper feature.
 PRODUCT_COPY_FILES := \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
+	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
 # LIBS
 PRODUCT_COPY_FILES += \
-    vendor/motorola/jordan/lib/libcamera.so:obj/lib/libcamera.so \
-    vendor/motorola/jordan/lib/libcamera.so:system/lib/libcamera.so \
-    vendor/motorola/jordan/lib/libaudio.so:obj/lib/libaudio.so \
-    vendor/motorola/jordan/lib/libaudio.so:system/lib/libaudio.so \
-    vendor/motorola/jordan/lib/libarcsoft.so:system/lib/libarcsoft.so \
-    vendor/motorola/jordan/lib/libbayercamera.so:system/lib/libbayercamera.so \
-    vendor/motorola/jordan/lib/libcaps.so:system/lib/libcaps.so \
-    vendor/motorola/jordan/lib/libIMGegl.so:system/lib/libIMGegl.so \
-    vendor/motorola/jordan/lib/libpvr2d.so:system/lib/libpvr2d.so \
-    vendor/motorola/jordan/lib/libpvrANDROID_WSEGL.so:system/lib/libpvrANDROID_WSEGL.so \
-    vendor/motorola/jordan/lib/libPVRScopeServices.so:system/lib/libPVRScopeServices.so \
-    vendor/motorola/jordan/lib/libsmiledetect.so:system/lib/libsmiledetect.so \
-    vendor/motorola/jordan/lib/libsrv_init.so:system/lib/libsrv_init.so \
-    vendor/motorola/jordan/lib/libsrv_um.so:system/lib/libsrv_um.so \
-    vendor/motorola/jordan/lib/libsoccamera.so:system/lib/libsoccamera.so \
-    vendor/motorola/jordan/lib/libbattd.so:system/lib/libbattd.so \
-    vendor/motorola/jordan/lib/libcryptoki.so:system/lib/libcryptoki.so \
-    vendor/motorola/jordan/lib/libganril.so:system/lib/libganril.so \
-    vendor/motorola/jordan/lib/libgki.so:system/lib/libgki.so \
-    vendor/motorola/jordan/lib/libglslcompiler.so:system/lib/libglslcompiler.so \
-    vendor/motorola/jordan/lib/libHPImgApi.so:system/lib/libHPImgApi.so \
-    vendor/motorola/jordan/lib/libmotdb.so:system/lib/libmotdb.so \
-    vendor/motorola/jordan/lib/libmotodbgutils.so:system/lib/libmotodbgutils.so \
-    vendor/motorola/jordan/lib/libmotdb.so:system/lib/libmotdb.so \
-    vendor/motorola/jordan/lib/libmsl_interface.so:system/lib/libmsl_interface.so \
-    vendor/motorola/jordan/lib/libssmgr.so:system/lib/libssmgr.so \
-    vendor/motorola/jordan/lib/libtpa.so:system/lib/libtpa.so \
-    vendor/motorola/jordan/lib/libtpa_core.so:system/lib/libtpa_core.so \
-    vendor/motorola/jordan/lib/libreference-ril.so:system/lib/libreference-ril.so \
-    vendor/motorola/jordan/lib/libril-moto-umts-1.so:system/lib/libril-moto-umts-1.so \
-    vendor/motorola/jordan/lib/librilswitch.so:system/lib/librilswitch.so \
-    vendor/motorola/jordan/lib/libsmapi.so:system/lib/libsmapi.so \
-    vendor/motorola/jordan/lib/hw/gralloc.omap3.so:system/lib/hw/gralloc.omap3.so \
-    vendor/motorola/jordan/lib/hw/gps.jordan.so:system/lib/hw/gps.jordan.so \
-    vendor/motorola/jordan/lib/dsp/baseimage.dof:system/lib/dsp/baseimage.dof \
-    vendor/motorola/jordan/lib/dsp/conversions.dll64P:system/lib/dsp/conversions.dll64P \
-    vendor/motorola/jordan/lib/dsp/h264vdec_sn.dll64P:system/lib/dsp/h264vdec_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/h264venc_sn.dll64P:system/lib/dsp/h264venc_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/jpegenc_sn.dll64P:system/lib/dsp/jpegenc_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/m4venc_sn.dll64P:system/lib/dsp/m4venc_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/mp3dec_sn.dll64P:system/lib/dsp/mp3dec_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/mp4vdec_sn.dll64P:system/lib/dsp/mp4vdec_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/mpeg4aacdec_sn.dll64P:system/lib/dsp/mpeg4aacdec_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/mpeg4aacenc_sn.dll64P:system/lib/dsp/mpeg4aacenc_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/nbamrdec_sn.dll64P:system/lib/dsp/nbamrdec_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/nbamrenc_sn.dll64P:system/lib/dsp/nbamrenc_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/postprocessor_dualout.dll64P:system/lib/dsp/postprocessor_dualout.dll64P \
-    vendor/motorola/jordan/lib/dsp/ringio.dll64P:system/lib/dsp/ringio.dll64P \
-    vendor/motorola/jordan/lib/dsp/usn.dll64P:system/lib/dsp/usn.dll64P \
-    vendor/motorola/jordan/lib/dsp/wbamrdec_sn.dll64P:system/lib/dsp/wbamrdec_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/wbamrenc_sn.dll64P:system/lib/dsp/wbamrenc_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/wmadec_sn.dll64P:system/lib/dsp/wmadec_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/720p_h264vdec_sn.dll64P:system/lib/dsp/720p_h264vdec_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/mpeg4ingenc_sn.dll64P:system/lib/dsp/mpeg4ingenc_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/h264ingdec_sn.dll64P:system/lib/dsp/h264ingdec_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/mpeg4ingdec_sn.dll64P:system/lib/dsp/mpeg4ingdec_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/720p_mp4vdec_sn.dll64P:system/lib/dsp/720p_mp4vdec_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/wmadec_sn.dll64P:system/lib/dsp/wmadec_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/720p_h264venc_sn.dll64P:system/lib/dsp/720p_h264venc_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/720p_mp4venc_sn.dll64P:system/lib/dsp/720p_mp4venc_sn.dll64P \
-    vendor/motorola/jordan/lib/dsp/wmv9dec_sn.dll64P:system/lib/dsp/wmv9dec_sn.dll64P \
-    vendor/motorola/jordan/lib/egl/libeglinfo.so:system/lib/egl/libeglinfo.so \
-    vendor/motorola/jordan/lib/egl/libEGL_POWERVR_SGX530_125.so:system/lib/egl/libEGL_POWERVR_SGX530_125.so \
-    vendor/motorola/jordan/lib/egl/libgles1_texture_stream.so:system/lib/egl/libgles1_texture_stream.so \
-    vendor/motorola/jordan/lib/egl/libgles2_texture_stream.so:system/lib/egl/libgles2_texture_stream.so \
-    vendor/motorola/jordan/lib/egl/libGLESv1_CM_POWERVR_SGX530_125.so:system/lib/egl/libGLESv1_CM_POWERVR_SGX530_125.so \
-    vendor/motorola/jordan/lib/egl/libGLESv2_POWERVR_SGX530_125.so:system/lib/egl/libGLESv2_POWERVR_SGX530_125.so \
-    vendor/motorola/jordan/lib/libOMX.TI.720P.Decoder.so:system/lib/libOMX.TI.720P.Decoder.so \
-    vendor/motorola/jordan/lib/libOMX.TI.720P.Encoder.so:system/lib/libOMX.TI.720P.Encoder.so \
-    vendor/motorola/jordan/lib/libOMX.TI.mp4.splt.Encoder.so:system/lib/libOMX.TI.mp4.splt.Encoder.so \
-    vendor/motorola/jordan/lib/libOMX.TI.h264.splt.Encoder.so:system/lib/libOMX.TI.h264.splt.Encoder.so \
-    vendor/motorola/jordan/lib/libFMRadio.so:system/lib/libFMRadio.so \
-    vendor/motorola/jordan/lib/libfmradio_jni.so:system/lib/libfmradio_jni.so \
-    vendor/motorola/jordan/lib/libfmradioplayer.so:system/lib/libfmradioplayer.so \
-    vendor/motorola/jordan/lib/liboemcamera.so:system/lib/liboemcamera.so \
-    vendor/motorola/jordan/lib/libpanic_daemon.so:system/lib/libpanic_daemon.so
+	vendor/motorola/jordan/lib/libcamera.so:system/lib/libmotocamera.so \
+	vendor/motorola/jordan/lib/libaudio.so:obj/lib/libaudio.so \
+	vendor/motorola/jordan/lib/libaudio.so:system/lib/libaudio.so \
+	vendor/motorola/jordan/lib/libarcsoft.so:system/lib/libarcsoft.so \
+	vendor/motorola/jordan/lib/libbayercamera.so:system/lib/libbayercamera.so \
+	vendor/motorola/jordan/lib/libcaps.so:system/lib/libcaps.so \
+	vendor/motorola/jordan/lib/libIMGegl.so:system/lib/libIMGegl.so \
+	vendor/motorola/jordan/lib/libpvr2d.so:system/lib/libpvr2d.so \
+	vendor/motorola/jordan/lib/libpvrANDROID_WSEGL.so:system/lib/libpvrANDROID_WSEGL.so \
+	vendor/motorola/jordan/lib/libPVRScopeServices.so:system/lib/libPVRScopeServices.so \
+	vendor/motorola/jordan/lib/libsmiledetect.so:system/lib/libsmiledetect.so \
+	vendor/motorola/jordan/lib/libsrv_init.so:system/lib/libsrv_init.so \
+	vendor/motorola/jordan/lib/libsrv_um.so:system/lib/libsrv_um.so \
+	vendor/motorola/jordan/lib/libsoccamera.so:system/lib/libsoccamera.so \
+	vendor/motorola/jordan/lib/libbattd.so:system/lib/libbattd.so \
+	vendor/motorola/jordan/lib/libcryptoki.so:system/lib/libcryptoki.so \
+	vendor/motorola/jordan/lib/libganril.so:system/lib/libganril.so \
+	vendor/motorola/jordan/lib/libgki.so:system/lib/libgki.so \
+	vendor/motorola/jordan/lib/libglslcompiler.so:system/lib/libglslcompiler.so \
+	vendor/motorola/jordan/lib/libHPImgApi.so:system/lib/libHPImgApi.so \
+	vendor/motorola/jordan/lib/libmotdb.so:system/lib/libmotdb.so \
+	vendor/motorola/jordan/lib/libmotodbgutils.so:system/lib/libmotodbgutils.so \
+	vendor/motorola/jordan/lib/libmotdb.so:system/lib/libmotdb.so \
+	vendor/motorola/jordan/lib/libmsl_interface.so:system/lib/libmsl_interface.so \
+	vendor/motorola/jordan/lib/libssmgr.so:system/lib/libssmgr.so \
+	vendor/motorola/jordan/lib/libtpa.so:system/lib/libtpa.so \
+	vendor/motorola/jordan/lib/libtpa_core.so:system/lib/libtpa_core.so \
+	vendor/motorola/jordan/lib/libreference-ril.so:system/lib/libreference-ril.so \
+	vendor/motorola/jordan/lib/libril-moto-umts-1.so:system/lib/libril-moto-umts-1.so \
+	vendor/motorola/jordan/lib/librilswitch.so:system/lib/librilswitch.so \
+	vendor/motorola/jordan/lib/libsmapi.so:system/lib/libsmapi.so \
+	vendor/motorola/jordan/lib/hw/gralloc.omap3.so:system/lib/hw/gralloc.omap3.so \
+	vendor/motorola/jordan/lib/hw/gps.jordan.so:system/lib/hw/gps.jordan.so \
+	vendor/motorola/jordan/lib/dsp/baseimage.dof:system/lib/dsp/baseimage.dof \
+	vendor/motorola/jordan/lib/dsp/conversions.dll64P:system/lib/dsp/conversions.dll64P \
+	vendor/motorola/jordan/lib/dsp/h264vdec_sn.dll64P:system/lib/dsp/h264vdec_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/h264venc_sn.dll64P:system/lib/dsp/h264venc_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/jpegenc_sn.dll64P:system/lib/dsp/jpegenc_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/m4venc_sn.dll64P:system/lib/dsp/m4venc_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/mp3dec_sn.dll64P:system/lib/dsp/mp3dec_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/mp4vdec_sn.dll64P:system/lib/dsp/mp4vdec_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/mpeg4aacdec_sn.dll64P:system/lib/dsp/mpeg4aacdec_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/mpeg4aacenc_sn.dll64P:system/lib/dsp/mpeg4aacenc_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/nbamrdec_sn.dll64P:system/lib/dsp/nbamrdec_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/nbamrenc_sn.dll64P:system/lib/dsp/nbamrenc_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/postprocessor_dualout.dll64P:system/lib/dsp/postprocessor_dualout.dll64P \
+	vendor/motorola/jordan/lib/dsp/ringio.dll64P:system/lib/dsp/ringio.dll64P \
+	vendor/motorola/jordan/lib/dsp/usn.dll64P:system/lib/dsp/usn.dll64P \
+	vendor/motorola/jordan/lib/dsp/wbamrdec_sn.dll64P:system/lib/dsp/wbamrdec_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/wbamrenc_sn.dll64P:system/lib/dsp/wbamrenc_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/wmadec_sn.dll64P:system/lib/dsp/wmadec_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/720p_h264vdec_sn.dll64P:system/lib/dsp/720p_h264vdec_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/mpeg4ingenc_sn.dll64P:system/lib/dsp/mpeg4ingenc_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/h264ingdec_sn.dll64P:system/lib/dsp/h264ingdec_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/mpeg4ingdec_sn.dll64P:system/lib/dsp/mpeg4ingdec_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/720p_mp4vdec_sn.dll64P:system/lib/dsp/720p_mp4vdec_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/wmadec_sn.dll64P:system/lib/dsp/wmadec_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/720p_h264venc_sn.dll64P:system/lib/dsp/720p_h264venc_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/720p_mp4venc_sn.dll64P:system/lib/dsp/720p_mp4venc_sn.dll64P \
+	vendor/motorola/jordan/lib/dsp/wmv9dec_sn.dll64P:system/lib/dsp/wmv9dec_sn.dll64P \
+	vendor/motorola/jordan/lib/egl/libeglinfo.so:system/lib/egl/libeglinfo.so \
+	vendor/motorola/jordan/lib/egl/libEGL_POWERVR_SGX530_125.so:system/lib/egl/libEGL_POWERVR_SGX530_125.so \
+	vendor/motorola/jordan/lib/egl/libgles1_texture_stream.so:system/lib/egl/libgles1_texture_stream.so \
+	vendor/motorola/jordan/lib/egl/libgles2_texture_stream.so:system/lib/egl/libgles2_texture_stream.so \
+	vendor/motorola/jordan/lib/egl/libGLESv1_CM_POWERVR_SGX530_125.so:system/lib/egl/libGLESv1_CM_POWERVR_SGX530_125.so \
+	vendor/motorola/jordan/lib/egl/libGLESv2_POWERVR_SGX530_125.so:system/lib/egl/libGLESv2_POWERVR_SGX530_125.so \
+	vendor/motorola/jordan/lib/libOMX.TI.720P.Decoder.so:system/lib/libOMX.TI.720P.Decoder.so \
+	vendor/motorola/jordan/lib/libOMX.TI.720P.Encoder.so:system/lib/libOMX.TI.720P.Encoder.so \
+	vendor/motorola/jordan/lib/libOMX.TI.mp4.splt.Encoder.so:system/lib/libOMX.TI.mp4.splt.Encoder.so \
+	vendor/motorola/jordan/lib/libOMX.TI.h264.splt.Encoder.so:system/lib/libOMX.TI.h264.splt.Encoder.so \
+	vendor/motorola/jordan/lib/libFMRadio.so:system/lib/libFMRadio.so \
+	vendor/motorola/jordan/lib/libfmradio_jni.so:system/lib/libfmradio_jni.so \
+	vendor/motorola/jordan/lib/libfmradioplayer.so:system/lib/libfmradioplayer.so \
+	vendor/motorola/jordan/lib/liboemcamera.so:system/lib/liboemcamera.so \
+	vendor/motorola/jordan/lib/libpanic_daemon.so:system/lib/libpanic_daemon.so 
 
-#vendor/motorola/jordan/lib/libbridge.so:system/lib/libbridge.so
-#vendor/motorola/jordan/lib/libLCML.so:system/lib/libLCML.so
+	#vendor/motorola/jordan/lib/libbridge.so:system/lib/libbridge.so
+	#vendor/motorola/jordan/lib/libLCML.so:system/lib/libLCML.so
+
 #etc
 PRODUCT_COPY_FILES += \
 	vendor/motorola/jordan/etc/wifi/fw_tiwlan_ap.bin:system/etc/wifi/fw_tiwlan_ap.bin \
@@ -163,7 +163,7 @@ PRODUCT_COPY_FILES += \
 	vendor/motorola/jordan/etc/motorola/comm_drv/mmins_user_settings.cfg:system/etc/motorola/comm_drv/mmins_user_settings.cfg \
 	vendor/motorola/jordan/etc/motorola/comm_drv/plmn_text_table.bin:system/etc/motorola/comm_drv/plmn_text_table.bin \
 	vendor/motorola/jordan/etc/motorola/comm_drv/PLMN_VERSION.txt:system/etc/motorola/comm_drv/PLMN_VERSION.txt \
-	vendor/motorola/jordan/etc/motorola/tcmd/pkiprovision.cfg:system/etc/motorola/tcmd/pkiprovision.cfg 
+	vendor/motorola/jordan/etc/motorola/tcmd/pkiprovision.cfg:system/etc/motorola/tcmd/pkiprovision.cfg
 
 #bin
 PRODUCT_COPY_FILES += \
