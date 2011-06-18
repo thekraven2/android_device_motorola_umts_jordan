@@ -102,7 +102,6 @@ PRODUCT_PACKAGES += \
 	libcamera \
 	libaudiopolicy \
 	bootmenu \
-	su \
 	Usb
 
 # Add DroidSSHd (dropbear) Management App - tpruvot/android_app_droidsshd @ github
