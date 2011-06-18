@@ -21,10 +21,6 @@ PRODUCT_COPY_FILES += \
 	device/motorola/jordan/qwerty.kl:system/usr/keylayout/qwerty.kl \
 	device/motorola/jordan/qwerty.kcm.bin:system/usr/keychars/qwerty.kcm.bin
 
-#bin
-PRODUCT_COPY_FILES += \
-	device/motorola/jordan/proprietary/xbin/groups:system/xbin/groups
-
 #etc
 PRODUCT_COPY_FILES += \
 	device/motorola/jordan/recovery.fstab:system/etc/recovery.fstab \
